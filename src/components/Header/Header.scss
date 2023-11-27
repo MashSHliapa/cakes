@@ -1,0 +1,38 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  &__block {}
+
+  &__container {}
+
+  &__menu {}
+
+}
+
+.menu {
+  font-family: 'Alice';
+  font-size: 25px;
+  line-height: 114%;
+
+  &__list {
+    display: flex;
+    padding: 25px 30px;
+    flex-wrap: wrap;
+    border: 1px solid #FFFFFF;
+  }
+
+  &__item {}
+
+  &__item:not(:last-child) {
+    margin-right: 103px;
+  }
+
+  &__link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
