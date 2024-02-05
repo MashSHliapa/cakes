@@ -1,13 +1,14 @@
 import { Header } from '../Header'
-import { Main } from '../Main'
+import { Outlet } from 'react-router-dom'
 import { MainMenu } from '../MainMenu'
 import './Layout.scss'
+
 
 export function Layout() {
   return (
     <div className="layout">
       <Header/>
-      <Main/>
+      <Outlet/>
       <MainMenu/>
     </div>
   )
