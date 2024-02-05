@@ -1,8 +1,53 @@
 .main-menu {
-  &__menu {
-    position: relative;
-    top: -574px;
-    right: 208px;
+
+  &__container {}
+
+  &__body {}
+
+  &__title {}
+
+  &__menu {}
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
   }
 
+  &__item {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 20px 0 40px 0;
+  }
+
+  &__title {
+    font-family: 'Alice';
+    font-size: 22px;
+    line-height: 114%;
+    padding-left: 45px;
+    padding-top: 15px;
+  }
+
+  &__title_title-long {
+    padding-left: 10px;
+  }
+
+  &__title_title-middle {
+    padding-left: 25px;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    &__item {
+      max-width: 230px;
+    }
+
+    &__title {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+  }
 }

@@ -15,24 +15,40 @@
 
 .menu {
   font-family: 'Alice';
-  font-size: 25px;
+  font-size: 20px;
   line-height: 114%;
 
   &__list {
     display: flex;
-    padding: 25px 30px;
+    padding: 25px 10px;
     flex-wrap: wrap;
     border: 1px solid #FFFFFF;
+    margin-bottom: 0px;
+    justify-content: center;
   }
 
   &__item {}
 
   &__item:not(:last-child) {
-    margin-right: 103px;
+    margin-right: 80px;
   }
 
   &__link {
     color: #FFFFFF;
     text-decoration: none;
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    font-size: 17px;
+    &__item:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  @media screen and (max-width: 991.98px) {
+    font-size: 15px;
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
   }
 }

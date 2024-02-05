@@ -21,6 +21,8 @@ li {
 
 img {
   vertical-align: top;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 h1,
@@ -31,11 +33,13 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
+   margin: 0;
 }
 
 body {
   line-height: 1;
   // font-family: 'ABeeZee', sans-serif;
+  font-family: 'Alice';
   font-weight: 400;
   font-size: 20px;
   color: #000000;
@@ -48,9 +52,13 @@ body {
   box-sizing: content-box;
 }
 
+
 .layout {
   min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: #F0EADA;
+  position: relative;
+  z-index: -1;
 }
