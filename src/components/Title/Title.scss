@@ -1,0 +1,15 @@
+.title {
+  background: #938273;
+
+  &__container {}
+
+  &__body {}
+
+  &__text {
+    text-transform: uppercase;
+    text-align: center;
+    color: #F0EADA;
+    font-size: 50px;
+    padding: 30px;
+  }
+}
