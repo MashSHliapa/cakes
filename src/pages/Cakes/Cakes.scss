@@ -1,0 +1,18 @@
+.cakes {
+  background: #BAA99B url('../../components/images/cakes/flower_cakes.png') 0 130px no-repeat;
+  background-size: 700px;
+
+  &__body {
+    margin: 40px;
+  }
+
+  &__title {}
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
