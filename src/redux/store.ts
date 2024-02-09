@@ -6,3 +6,5 @@ export const store = configureStore({
     cakes: cakesReducer
   }
 })
+
+export type RootState = ReturnType<typeof store.getState>
