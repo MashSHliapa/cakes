@@ -1,7 +1,8 @@
-import instagram from '../images/instagram.svg'
-import telegram from '../images/telegram.svg'
+// import instagram from '../images/instagram.svg'
+// import telegram from '../images/telegram.svg'
 import logo from '../images/footer_logo.svg'
 import './Footer.scss'
+import { Contacts } from '../Contacts'
 
 export function Footer() {
   return (
@@ -11,20 +12,7 @@ export function Footer() {
           <div className="footer__col footer__col_1">
             <div className="footer__contacts contacts">
               <div className="contacts__text _text">Мои контакты:</div>
-              <div className="contacts__data">
-                <div className="contacts__phone">+375 (29) 226-67-34</div>
-                <div className="contacts__email">Email: ovknady@mail.ru</div>
-                <div className="contacts__icons">
-                  <div className="contacts__icon-instagram _icon">
-                    <a href="https://www.instagram.com/vanilla.crazy/?igshid=MzMyNGUyNmU2YQ%3D%3D" target="_blank">
-                      <img src={instagram} alt="instagram" />
-                    </a>
-                  </div>
-                  <div className="contacts__icon-telegram _icon">
-                    <a href="https://web.telegram.org/k/#/@MariaShliapnikova" target="_blank"><img src={telegram} alt="telegram" /></a>
-                  </div>
-                </div>
-              </div>
+              <Contacts />
               <div className="contacts__text _text">Адрес самовывоза:</div>
               <div className="contacts__address">г. Минск<br />
                 ул. Белецкого, 14/2</div>

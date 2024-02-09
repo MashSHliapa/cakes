@@ -109,86 +109,9 @@
   }
 }
 
-
 .contacts {
-
   &__text {}
-
-  &__data {}
-
-  &__phone {}
-
-  &__email {
-    font-size: 25px;
-    padding: 5px 0 15px;
-  }
-
-  &__icons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 25px;
-  }
-
-  &__icon-telegram {}
-
-  &__address {}
-
-
-  @media screen and (max-width: 1199.98px) {
-    &__email {
-      font-size: 22px;
-    }
-  }
-
-  @media screen and (max-width: 991.98px) {
-    &__email {
-      font-size: 20px;
-    }
-
-    &__icon-instagram img {
-      width: 40px;
-      height: 40px;
-    }
-
-    &__icon-telegram img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  @media screen and (max-width: 767.98px) {
-    &__email {
-      font-size: 16px;
-    }
-  }
-
-  @media screen and (max-width: 575.98px) {
-    &__email {
-      font-size: 13px;
-    }
-
-    &__icons {
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    &__icon-instagram img {
-      width: 30px;
-      height: 30px;
-    }
-
-    &__icon-telegram img {
-      width: 30px;
-      height: 30px;
-    }
-
-    &__address {
-      font-size: 13px;
-    }
-  }
 }
-
 
 .info {
   text-align: center;

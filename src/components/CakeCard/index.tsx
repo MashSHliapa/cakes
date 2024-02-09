@@ -1,4 +1,5 @@
 import { PostData } from '../../types/interfaces'
+import { Contacts } from '../Contacts'
 import './CakeCard.scss'
 
 export function CakeCard(props: { post: PostData }) {
@@ -17,6 +18,7 @@ export function CakeCard(props: { post: PostData }) {
           <div className="cake-card__separator"></div>
           <div className="cake-card__text">Все подробности оговариваются индивидуально
             в соответствии с Вашими пожеланиями!</div>
+            <Contacts />
         </div>
       </div>
     </div>

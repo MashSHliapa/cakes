@@ -1,10 +1,13 @@
 .cake-card {
+  background: url('../images/flower_card.png');
+  margin-bottom: 100px;
+
   &__body {
-    // border: 1px solid #9EABBF;
     padding: 65px;
     display: flex;
     justify-content: space-around;
     background: #9EABBF;
+    background: #9EABBF url('../images/flower_card.png') 0 120px no-repeat;
   }
 
   &__image {
@@ -131,6 +134,4 @@
       font-size: 16px;
     }
   }
-
-
 }
