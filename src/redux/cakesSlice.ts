@@ -79,7 +79,7 @@ export const cakesSlice = createSlice({
       {
         id: 8,
         category: 'for_men',
-        title: 'Торт денб рождение',
+        title: 'Торт день рождение',
         subtitle: 'Десерт ',
         weight: '1300 г',
         image: balls_black,
@@ -87,7 +87,7 @@ export const cakesSlice = createSlice({
       {
         id: 9,
         category: 'for_women',
-        title: 'Торт денб рождение',
+        title: 'Торт день рождение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         weight: '1300 г',
         image: leopard_pink,
@@ -95,7 +95,7 @@ export const cakesSlice = createSlice({
       {
         id: 10,
         category: 'pie',
-        title: 'Торт денб рождение',
+        title: 'Торт день рождение',
         subtitle: 'Десерт ',
         weight: '1300 г',
         image: icecreame_cakes,
@@ -103,7 +103,7 @@ export const cakesSlice = createSlice({
       {
         id: 11,
         category: 'open',
-        title: 'Торт денб рождение',
+        title: 'Торт день рождение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         weight: '1300 г',
         image: open_heart1,
@@ -111,21 +111,21 @@ export const cakesSlice = createSlice({
       {
         id: 12,
         category: 'open',
-        title: 'Торт денб рождение',
+        title: 'Торт день рождение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: open_heart5,
       },
       {
         id: 13,
         category: 'pie',
-        title: 'Торт денб рождение',
+        title: 'Торт день рождение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: pies1,
       },
       {
         id: 14,
         category: 'set',
-        title: 'Торт денб рождение',
+        title: 'Торт день рождение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: set1,
       },

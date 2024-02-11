@@ -1,16 +1,27 @@
+import { useParams } from 'react-router-dom'
 import { CakeCard } from '../../components/CakeCard'
 import { useSelector } from 'react-redux'
+import { RootState } from '../../redux/store'
+import { PostData } from '../../types/interfaces'
 
 export function Cake() {
-  const { data: post } = useSelector((state) => state.cakes)
 
-  const cakePage = post.slice(0, 1).map((item) => <CakeCard key={item.id} post={item} />)
+  const { data: posts } = useSelector((state: RootState) => state.cakes)
+
+  console.log(posts)
+
+  const { postId } = useParams()
+  console.log(postId)
+
+  const card = posts.find((item: PostData) => item.id == postId)
+  console.log(card)
+
 
   return (
     <div className="cake">
       <div className="cake__container _container">
         <div className="cake__body">
-          {cakePage}
+          <CakeCard post={card} />
         </div>
       </div>
     </div>

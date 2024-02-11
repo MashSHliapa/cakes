@@ -3,7 +3,7 @@ import { cakesReducer } from './cakesSlice'
 
 export const store = configureStore({
   reducer: {
-    cakes: cakesReducer
+    cakes: cakesReducer,
   }
 })
 

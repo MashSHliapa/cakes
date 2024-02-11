@@ -11,7 +11,7 @@ export function CakeCard(props: { post: PostData }) {
           <img src={props.post.image} alt="image" />
         </div>
         <div className="cake-card__info">
-          <div className="cake-card__title">{props.post.title}</div>
+          {/* <div className="cake-card__title">{props.post.title}</div> */}
           <div className="cake-card__subtitle">Для создания выбранного Вами угощения используется только натуральные и качественные ингредиенты!
             <span>Также можно выбрать и изменить декор по Вашему усмотрению. А начинку можно выбрать здесь.</span>
           </div>

@@ -6,9 +6,9 @@ import { RootState } from '../../redux/store'
 
 export function Cakes() {
 
-  const { data: post } = useSelector((state: RootState) => state.cakes)
+  const { data: posts } = useSelector((state: RootState) => state.cakes)
 
-  const cakesPage = post.map((item) => <CakesCard key={item.id} post={item} />)
+  const cakesPage = posts.map((item) => <CakesCard key={item.id} post={item} />)
 
   return (
     <div className="cakes">

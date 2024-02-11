@@ -1,5 +1,7 @@
 export interface PostData {
-  id: number;
-  image: string;
+  id: number | undefined;
+  category?: string;
   title?: string;
+  subtitle?: string;
+  image: string;
 }

@@ -6,6 +6,7 @@
     padding: 65px;
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
     background: #9EABBF;
     background: #9EABBF url('../images/flower_card.png') 0 120px no-repeat;
   }
@@ -13,11 +14,12 @@
   &__image {
     background-color: aliceblue;
     padding: 20px;
+    border: 1px solid #020304;
   }
 
   &__image img {
-    max-width: 400px;
-    max-height: 600px;
+    width:400px;
+    height: 500px;
   }
 
   &__info {
@@ -45,7 +47,6 @@
     max-width: 575px;
     background-color: #000000;
     height: 2px;
-    // margin: 0 auto;
   }
 
   &__text {
@@ -105,11 +106,9 @@
 
     &__image img {
       max-width: 300px;
-      // max-height: 600px;
     }
 
     &__info {
-      // max-width: 500px;
     }
 
     &__title {

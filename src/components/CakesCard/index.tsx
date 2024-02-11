@@ -12,7 +12,7 @@ export function CakesCard(props: { post: PostData }) {
         </div>
         {/* <div className="cakes-card__title">{props.post.title}</div>
         <div className="cakes-card__separator"></div> */}
-        <NavLink to="/cake" className="cakes-card__button">Подробнее</NavLink>
+        <NavLink to={`/cake/${props.post.id}`} className="cakes-card__button">Подробнее</NavLink>
       </div>
     </div>
   )

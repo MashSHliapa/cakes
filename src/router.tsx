@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
         element: <Cakes />
       },
       {
-        path: '/cake',
+        path: '/cake/:postId',
         element: <Cake />
       }
     ]
