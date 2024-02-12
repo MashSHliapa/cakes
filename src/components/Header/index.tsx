@@ -12,9 +12,9 @@ export function Header() {
             <li className="menu__item">
               <a className="menu__link" href="#">Начинки</a>
             </li>
-            <li className="menu__item">
+            {/* <li className="menu__item">
               <a className="menu__link" href="#">Доставка</a>
-            </li>
+            </li> */}
             <li className="menu__item">
               <a className="menu__link" href="#">Отзывы</a>
             </li>

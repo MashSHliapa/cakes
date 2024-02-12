@@ -7,12 +7,18 @@ import open_honey from '../images/mainMenu/open_honey.png'
 import pies from '../images/mainMenu/pies.png'
 import sets from '../images/mainMenu/sets.png'
 import fillings from '../images/mainMenu/fillings.png'
+import decor from '../images/decor.png'
 import './MainMenu.scss'
+
 export function MainMenu() {
   return (
     <div className="main-menu">
+      <div className="main__decor">
+        <img src={decor} alt="decor" />
+      </div>
       <div className="main-menu__container _container">
         <div className="main-menu__body">
+
           <div className="main-menu__menu">
             <ul className="main-menu__list">
               <li className="main-menu__item">

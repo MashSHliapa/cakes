@@ -1,9 +1,13 @@
 .header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 5;
+  // position: absolute;
+  // width: 100%;
+  // top: 0;
+  // left: 0;
+  // z-index: 50;
+  background: radial-gradient(#BAA99B, #272320);
+  background: linear-gradient(to right, #918071, #272320);
+
+  // background: linear-gradient(to right, #BAA99B, #56483e);
 
   &__block {}
 
@@ -20,7 +24,6 @@
     display: flex;
     padding: 25px 10px;
     flex-wrap: wrap;
-    border: 1px solid #FFFFFF;
     margin-bottom: 0px;
     justify-content: center;
   }
@@ -33,11 +36,11 @@
 
   &__link {
     color: #FFFFFF;
-    // text-decoration: none;
   }
 
   @media screen and (max-width: 1199.98px) {
     font-size: 17px;
+
     &__item:not(:last-child) {
       margin-right: 60px;
     }
@@ -45,6 +48,7 @@
 
   @media screen and (max-width: 991.98px) {
     font-size: 15px;
+
     &__item:not(:last-child) {
       margin-right: 40px;
     }
