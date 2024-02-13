@@ -6,51 +6,37 @@
   // z-index: 50;
   background: radial-gradient(#BAA99B, #272320);
   background: linear-gradient(to right, #918071, #272320);
+  // background: linear-gradient(to right, #272320, #918071);
+  // background: #272320;
 
-  // background: linear-gradient(to right, #BAA99B, #56483e);
-
-  &__block {}
-
-  &__container {}
-
-  &__menu {}
-
-}
-
-.menu {
-  line-height: 114%;
-
-  &__list {
-    display: flex;
-    padding: 25px 10px;
-    flex-wrap: wrap;
-    margin-bottom: 0px;
-    justify-content: center;
+  &__container {
+    position: relative;
+    border: #272320 1px solid;
   }
 
-  &__item {}
+  &__navbar {}
 
-  &__item:not(:last-child) {
-    margin-right: 80px;
+  &__burger {
+    display: none;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 5;
   }
 
-  &__link {
-    color: #FFFFFF;
-  }
-
-  @media screen and (max-width: 1199.98px) {
-    font-size: 17px;
-
-    &__item:not(:last-child) {
-      margin-right: 60px;
+  @media screen and (max-width: 767.98px) {
+    &__container {
+      height: 50px;
     }
-  }
 
-  @media screen and (max-width: 991.98px) {
-    font-size: 15px;
+    &__burger {
+      display: block;
+    }
 
-    &__item:not(:last-child) {
-      margin-right: 40px;
+    &__navbar {
+      display: none;
     }
   }
 }
+
+
