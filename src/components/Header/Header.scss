@@ -6,12 +6,25 @@
   // z-index: 50;
   background: radial-gradient(#BAA99B, #272320);
   background: linear-gradient(to right, #918071, #272320);
-  // background: linear-gradient(to right, #272320, #918071);
+  background: linear-gradient(to right, #272320, #918071);
   // background: #272320;
 
-  &__container {
+  &__container {}
+
+  &__body {
     position: relative;
-    border: #272320 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 50px;
+  }
+
+  &__logo {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
   }
 
   &__navbar {}
@@ -24,9 +37,35 @@
     z-index: 5;
   }
 
+  @media screen and (max-width: 1199.98px) {
+    &__body {
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: 991.98px) {
+    &__body {
+      margin-right: 0px;
+    }
+
+    &__logo img {
+      max-width: 35px;
+    }
+  }
+
   @media screen and (max-width: 767.98px) {
     &__container {
       height: 50px;
+    }
+
+    &__body {
+      display: block;
+      margin: 0 -8px 0 15px;
+    }
+
+    &__logo img {
+      max-width: 25px;
+      margin-top: 10px;
     }
 
     &__burger {
@@ -37,6 +76,11 @@
       display: none;
     }
   }
+
+  @media screen and (max-width: 575.98px) {
+    &__body {
+      display: block;
+      margin: 0 -10px 0 10px;
+    }
+  }
 }
-
-
