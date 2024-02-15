@@ -41,6 +41,11 @@
   }
 
   @media screen and (max-width: 991.98px) {
+
+    &__list {
+      margin-left: 60px;
+    }
+
     &__item {
       max-width: 230px;
     }

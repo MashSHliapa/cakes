@@ -61,6 +61,11 @@ body {
 ._icon:hover {
   transform: scale(1.2);
   transition: transform 0.5s ease;
+
+  @media screen and (max-width: 991.98px) {
+    transform: none;
+    transition: none;
+  }
 }
 
 ._ibg {

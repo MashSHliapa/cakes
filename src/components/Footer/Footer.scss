@@ -6,10 +6,9 @@
   }
 
   &__body {
-    margin: 30px 0 10px;
-    font-size: 30px;
+    margin: 30px 0 50px;
+    font-size: 25px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     line-height: 114%;
   }
@@ -18,16 +17,6 @@
     padding: 0 15px;
     flex: 0 1 33.333%;
   }
-
-  &__col_1 {}
-
-  &__col_2 {
-    @media screen and (max-width: 767.98px) {
-      order: 3;
-    }
-  }
-
-  &__col_3 {}
 
   &__contacts {}
 
@@ -38,24 +27,23 @@
   &__copyright {
     text-align: center;
     font-size: 18px;
-    padding: 0 0 50px;
+    padding: 0 0 15px;
   }
 
   @media screen and (max-width: 1199.98px) {
     &__body {
-      font-size: 25px;
+      font-size: 22px;
     }
 
     &__copyright {
       font-size: 15px;
-      padding: 0 0 40px;
     }
   }
 
   @media screen and (max-width: 991.98px) {
     &__body {
-      font-size: 20px;
-      margin: 30px 0 5px;
+      font-size: 18px;
+      margin: 30px 0 30px;
     }
 
     &__copyright {
@@ -64,28 +52,25 @@
   }
 
   @media screen and (max-width: 767.98px) {
+
     &__body {
-      font-size: 17px;
-      margin: 30px 0 30px;
+      max-width: 300px;
+      margin: 20px auto 20px;
     }
 
     &__col {
-      flex: 0 1 50%;
+      flex: 0 1 100%;
+      margin: 15px 0px;
     }
 
     &__copyright {
-      font-size: 10px;
-      padding: 0 0 20px;
+      font-size: 9px;
     }
   }
 
   @media screen and (max-width: 575.98px) {
     &__body {
-      font-size: 14px;
-    }
-
-    &__col {
-      padding: 0 5px;
+      max-width: 260px;
     }
 
     &__copyright {
@@ -99,22 +84,23 @@
   font-size: 18px;
   padding: 0 0 10px 0;
   color: #F0EADA;
-
-  @media screen and (max-width: 767.98px) {
-    font-size: 15px;
-  }
-
-  @media screen and (max-width: 575.98px) {
-    font-size: 12px;
-  }
 }
 
 .contacts {
   &__text {}
+
+  &__data {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    &__data {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .info {
-  text-align: center;
   padding-top: 8px;
 
   &__logo {}
@@ -125,7 +111,8 @@
 
   &__name {
     color: #9FDDFF;
-    padding-bottom: 10px;
+    max-width: 200px;
+    padding-bottom: 20px;
     line-height: 114%;
   }
 
@@ -135,6 +122,11 @@
   }
 
   @media screen and (max-width: 1199.98px) {
+
+    &__logo img {
+      max-width: 90px;
+    }
+
     &__name {
       font-size: 28px;
     }
@@ -147,7 +139,7 @@
   @media screen and (max-width: 991.98px) {
 
     &__logo img {
-      max-width: 90px;
+      max-width: 70px;
     }
 
     &__name {
@@ -160,16 +152,15 @@
   }
 
   @media screen and (max-width: 767.98px) {
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
+    padding-top: 0px;
 
     &__about {
-      padding: 0px 20px 0px 20px;
+      padding: 20px 0 0;
     }
 
     &__name {
       font-size: 20px;
+      padding-bottom: 10px;
     }
 
     &__title {
@@ -181,32 +172,10 @@
       padding-top: 30px;
     }
   }
-
-  @media screen and (max-width: 575.98px) {
-    padding-top: 25px;
-
-    &__logo img {
-      max-width: 65px;
-    }
-
-    &__about {
-      padding: 0px 20px 0px 20px;
-    }
-
-    &__name {
-      font-size: 15px;
-      padding-bottom: 7px;
-    }
-
-    &__title {
-      font-size: 15px;
-    }
-  }
 }
 
 
 .delivery {
-  text-align: end;
 
   &__text {}
 
@@ -235,16 +204,6 @@
   @media screen and (max-width: 767.98px) {
     &__conditions {
       font-size: 13px;
-    }
-  }
-
-  @media screen and (max-width: 575.98px) {
-    &__conditions {
-      font-size: 10px;
-    }
-
-    &__conditions span {
-      padding: 12px 0 12px;
     }
   }
 }
