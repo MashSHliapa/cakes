@@ -3,6 +3,7 @@ import { Layout } from './components/Layout'
 // import { Main } from './components/Main'
 import { Cakes } from './pages/Cakes'
 import { Cake } from './pages/Cake'
+import { AboutMe } from './pages/Cake/AboutMe'
 
 
 export const router = createBrowserRouter([
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: '/cake/:postId',
         element: <Cake />
+      },
+      {
+        path: '/about',
+        element: <AboutMe />
       }
     ]
   }

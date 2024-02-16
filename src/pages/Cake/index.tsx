@@ -21,7 +21,7 @@ export function Cake() {
     <div className="cake">
       <div className="cake__container _container">
         <div className="cake__body">
-          <CakeCard post={card} />
+          {card && <CakeCard post={card} />}
         </div>
       </div>
     </div>

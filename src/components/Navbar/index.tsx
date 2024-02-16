@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import './Navbar.scss'
 
 export function Navbar() {
@@ -18,7 +19,7 @@ export function Navbar() {
             <a className="navbar__link" href="#">Контакты</a>
           </li>
           <li className="navbar__item _icon">
-            <a className="navbar__link" href="#">Обо мне</a>
+            <NavLink className="navbar__link" to="/about">Обо мне</NavLink>
           </li>
         </ul>
       </nav>

@@ -3,5 +3,6 @@ export interface PostData {
   category?: string;
   title?: string;
   subtitle?: string;
+  weight?: string;
   image: string;
 }
