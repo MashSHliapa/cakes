@@ -89,3 +89,31 @@ body {
   background-color: #F0EADA;
   position: relative;
 }
+
+/////////////////////////////для всех тортов по категориям
+.cakes {
+  background: url('../../components/images/cakes/flower_cakes_left.png') 0 130px no-repeat, url('../../components/images/cakes/flower_cakes_right.png') right bottom no-repeat #BAA99B;
+  background-size: 500px, 300px;
+
+  &__body {
+    margin: 40px;
+  }
+
+  &__title {}
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 575.98px) {
+    background-size: 250px, 0px;
+
+    &__body {
+      margin: 40px 15px;
+    }
+  }
+}

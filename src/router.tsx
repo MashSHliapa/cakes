@@ -4,6 +4,9 @@ import { Layout } from './components/Layout'
 import { Cakes } from './pages/Cakes'
 import { Cake } from './pages/Cake'
 import { AboutMe } from './pages/Cake/AboutMe'
+import { CakesForWedding } from './pages/CakesForWedding'
+import { CakesForChildren } from './pages/CakesForChildren'
+import { CakesForMen } from './pages/CakesForMen'
 
 
 export const router = createBrowserRouter([
@@ -21,6 +24,18 @@ export const router = createBrowserRouter([
       {
         path: '/about',
         element: <AboutMe />
+      },
+      {
+        path: '/cakes/for_wedding',
+        element: <CakesForWedding />
+      },
+      {
+        path: '/cakes/for_children',
+        element: <CakesForChildren/>
+      },
+      {
+        path: '/cakes/for_men',
+        element: <CakesForMen/>
       }
     ]
   }

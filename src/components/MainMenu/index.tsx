@@ -9,6 +9,7 @@ import sets from '../images/mainMenu/sets.png'
 import fillings from '../images/mainMenu/fillings.png'
 import decor from '../images/decor.png'
 import './MainMenu.scss'
+import { NavLink } from 'react-router-dom'
 
 export function MainMenu() {
   return (
@@ -22,15 +23,15 @@ export function MainMenu() {
           <div className="main-menu__menu">
             <ul className="main-menu__list">
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/for_wedding'}>
                   <img src={for_wedding} alt="for_wedding" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title">Свадебные</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/for_children'}>
                   <img src={for_children} alt="for_children" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title">Детские</div>
               </li>
               <li className="main-menu__item">
@@ -40,9 +41,9 @@ export function MainMenu() {
                 <div className="main-menu__title main-menu__title_title-middle">На Крещение</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/for_men'}>
                   <img src={for_men} alt="for_men" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title main-menu__title_title-long">Для джентельменов</div>
               </li>
               <li className="main-menu__item">
