@@ -3,7 +3,7 @@ import for_children from '../images/mainMenu/for_children.png'
 import for_christening from '../images/mainMenu/for_christening.png'
 import for_men from '../images/mainMenu/for_men.png'
 import for_women from '../images/mainMenu/for_women.png'
-import open_honey from '../images/mainMenu/open_honey.png'
+import open_cakes from '../images/mainMenu/open_honey.png'
 import pies from '../images/mainMenu/pies.png'
 import sets from '../images/mainMenu/sets.png'
 import fillings from '../images/mainMenu/fillings.png'
@@ -47,21 +47,21 @@ export function MainMenu() {
                 <div className="main-menu__title main-menu__title_title-long">Для джентельменов</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/for_women'}>
                   <img src={for_women} alt="for_women" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title">Для леди</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
-                  <img src={open_honey} alt="honey_cakes" />
-                </a>
+                <NavLink to={'/cakes/open_cakes'}>
+                  <img src={open_cakes} alt="open_cakes" />
+                </NavLink>
                 <div className="main-menu__title main-menu__title_title-long">Открытые медовики</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/pies'}>
                   <img src={pies} alt="pies" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title">Пирожные</div>
               </li>
               <li className="main-menu__item">

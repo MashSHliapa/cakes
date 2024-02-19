@@ -7,6 +7,8 @@ import { AboutMe } from './pages/Cake/AboutMe'
 import { CakesForWedding } from './pages/CakesForWedding'
 import { CakesForChildren } from './pages/CakesForChildren'
 import { CakesForMen } from './pages/CakesForMen'
+import { CakesForWomen } from './pages/CakesForWomen'
+import { OpenCakes } from './pages/OpenCakes'
 
 
 export const router = createBrowserRouter([
@@ -36,6 +38,14 @@ export const router = createBrowserRouter([
       {
         path: '/cakes/for_men',
         element: <CakesForMen/>
+      },
+      {
+        path: '/cakes/for_women',
+        element: <CakesForWomen/>
+      },
+      {
+        path: '/cakes/open_cakes',
+        element: <OpenCakes/>
       }
     ]
   }
