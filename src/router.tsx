@@ -9,6 +9,9 @@ import { CakesForChildren } from './pages/CakesForChildren'
 import { CakesForMen } from './pages/CakesForMen'
 import { CakesForWomen } from './pages/CakesForWomen'
 import { OpenCakes } from './pages/OpenCakes'
+import { Pies } from './pages/Pies'
+import { Sets } from './pages/Sets'
+import { CakesForChristening } from './pages/CakesForChristening'
 
 
 export const router = createBrowserRouter([
@@ -36,6 +39,10 @@ export const router = createBrowserRouter([
         element: <CakesForChildren/>
       },
       {
+        path: '/cakes/for_christening',
+        element: <CakesForChristening/>
+      },
+      {
         path: '/cakes/for_men',
         element: <CakesForMen/>
       },
@@ -46,6 +53,14 @@ export const router = createBrowserRouter([
       {
         path: '/cakes/open_cakes',
         element: <OpenCakes/>
+      },
+      {
+        path: '/cakes/pies',
+        element: <Pies/>
+      },
+      {
+        path: '/cakes/sets',
+        element: <Sets/>
       }
     ]
   }

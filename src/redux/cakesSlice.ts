@@ -65,7 +65,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 2,
-        category: 'christening',
+        category: 'for_christening',
         title: 'Торт на Крещение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: christening2,
@@ -80,7 +80,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 4,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт день рождение',
         subtitle: 'Десерт lorem ipsum Десерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт',
         weight: '1300 г',
@@ -88,7 +88,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 5,
-        category: 'wedding',
+        category: 'for_wedding',
         title: 'Торт для свадьбы',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: wedding2,
@@ -111,7 +111,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 9,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт 1 годик',
         subtitle: 'Десерт lorem ipsum Десерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsum',
         weight: '1000 г',
@@ -156,21 +156,21 @@ export const cakesSlice = createSlice({
       },
       {
         id: 15,
-        category: 'christening',
+        category: 'for_christening',
         title: 'Торт на Крещение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: christening1,
       },
       {
         id: 16,
-        category: 'wedding',
+        category: 'for_wedding',
         title: 'Торт для свадьбы',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: wedding1,
       },
       {
         id: 17,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт день рождение',
         subtitle: 'Десерт ',
         weight: '1300 г',
@@ -178,7 +178,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 18,
-        category: 'wedding',
+        category: 'for_wedding',
         title: 'Торт для свадьбы',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: wedding3,
@@ -193,7 +193,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 20,
-        category: 'wedding',
+        category: 'for_wedding',
         title: 'Торт для свадьбы',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: wedding5,
@@ -231,7 +231,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 25,
-        category: 'wedding',
+        category: 'for_wedding',
         title: 'Торт для свадьбы',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: wedding4,
@@ -268,7 +268,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 30,
-        category: 'wedding',
+        category: 'for_wedding',
         title: 'Торт для свадьбы',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: wedding6,
@@ -283,7 +283,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 32,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт котик',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         weight: '500 г',
@@ -336,7 +336,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 39,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт 1 годик',
         subtitle: 'Десерт lorem ipsum Десерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsum',
         weight: '1000 г',
@@ -381,7 +381,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 45,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт 1 годик',
         subtitle: 'Десерт lorem ipsum Десерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsum',
         weight: '1000 г',
@@ -389,14 +389,14 @@ export const cakesSlice = createSlice({
       },
       {
         id: 46,
-        category: 'christening',
+        category: 'for_christening',
         title: 'Торт на Крещение',
         subtitle: 'Идефльнийший десерт для Вашего праздника! Сочетание вкусов и интереснейший декор подымет настроиение и подарит Вашим гостям прекрасный день! ',
         image: christening3,
       },
       {
         id: 47,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт день рождение',
         subtitle: 'Десерт lorem ipsum Десерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт',
         weight: '1300 г',
@@ -419,7 +419,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 50,
-        category: 'children',
+        category: 'for_children',
         title: 'Торт 1 годик',
         subtitle: 'Десерт lorem ipsum Десерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsumДесерт lorem ipsum',
         weight: '1000 г',

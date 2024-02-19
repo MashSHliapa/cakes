@@ -35,9 +35,9 @@ export function MainMenu() {
                 <div className="main-menu__title">Детские</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/for_christening'}>
                   <img src={for_christening} alt="for_christening" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title main-menu__title_title-middle">На Крещение</div>
               </li>
               <li className="main-menu__item">
@@ -65,9 +65,9 @@ export function MainMenu() {
                 <div className="main-menu__title">Пирожные</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/sets'}>
                   <img src={sets} alt="sets" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title">Наборы</div>
               </li>
               <li className="main-menu__item">
