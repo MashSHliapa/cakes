@@ -71,9 +71,9 @@ export function MainMenu() {
                 <div className="main-menu__title">Наборы</div>
               </li>
               <li className="main-menu__item">
-                <a href="#">
+                <NavLink to={'/cakes/fillings'}>
                   <img src={fillings} alt="fillings" />
-                </a>
+                </NavLink>
                 <div className="main-menu__title">Начинки</div>
               </li>
             </ul>

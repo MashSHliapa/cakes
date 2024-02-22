@@ -12,6 +12,7 @@ import { OpenCakes } from './pages/OpenCakes'
 import { Pies } from './pages/Pies'
 import { Sets } from './pages/Sets'
 import { CakesForChristening } from './pages/CakesForChristening'
+import { Fillings } from './pages/Fillings'
 
 
 export const router = createBrowserRouter([
@@ -61,6 +62,10 @@ export const router = createBrowserRouter([
       {
         path: '/cakes/sets',
         element: <Sets/>
+      },
+      {
+        path: '/cakes/fillings',
+        element: <Fillings/>
       }
     ]
   }
