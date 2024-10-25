@@ -1,7 +1,7 @@
-import { MenuBurger } from '../MenuBurger'
-import { Navbar } from '../Navbar'
-import logo from '../images/header_logo.png'
-import './Header.scss'
+import { MenuBurger } from '../BurgerMenu/BurgerMenu';
+import { Navbar } from '../Navbar/Navbar';
+import logo from '../images/header_logo.svg';
+import './Header.scss';
 
 export function Header() {
   return (
@@ -20,5 +20,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

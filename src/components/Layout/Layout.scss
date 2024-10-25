@@ -5,11 +5,20 @@
   border: 0;
   padding: 0;
   margin: 0;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
 }
 
 ul,
@@ -40,15 +49,41 @@ h6 {
 
 body {
   line-height: 1;
-  // font-family: 'ABeeZee', sans-serif;
   font-family: 'Alice';
   font-weight: 400;
   font-size: 20px;
   color: #000000;
 }
 
+@mixin breakpoint($size) {
+  @if $size ==lg {
+    @media screen and (max-width: 1199.98px) {
+      @content;
+    }
+  }
+
+  @else if $size ==md {
+    @media screen and (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @else if $size ==sm {
+    @media screen and (max-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @else if $size ==xs {
+    @media screen and (max-width: 575.98px) {
+      @content;
+    }
+  }
+}
+
+/////////////////////
 ._container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: content-box;
@@ -60,7 +95,7 @@ body {
 
 ._icon:hover {
   transform: scale(1.2);
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 
   @media screen and (max-width: 991.98px) {
     transform: none;
@@ -81,14 +116,14 @@ body {
   object-fit: cover;
 }
 
-.layout {
-  min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  background-color: #F0EADA;
-  position: relative;
-}
+// .layout {
+//   min-height: 100%;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   background-color: #F0EADA;
+//   position: relative;
+// }
 
 /////////////////////////////для всех тортов по категориям
 .cakes {
