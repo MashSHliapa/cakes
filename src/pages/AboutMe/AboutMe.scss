@@ -1,0 +1,338 @@
+@import '../../components/Layout/Layout.scss';
+$color-basic: #acc6e6;
+
+.about {
+  background: #f0eada;
+
+  &__body {
+    padding: 40px 0px 40px;
+
+    @include breakpoint(sm) {
+      padding: 30px 0px 45px;
+    }
+
+    @include breakpoint(xs) {
+      padding: 30px 0px 20px;
+    }
+  }
+
+  &__chapter {
+    text-align: center;
+    font-size: 50px;
+    color: #596fa0;
+    margin-bottom: 40px;
+
+    @include breakpoint(lg) {
+      font-size: 40px;
+    }
+
+    @include breakpoint(md) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 30px;
+    }
+  }
+
+  &__content-box {
+    display: flex;
+    justify-content: space-around;
+    color: #66615c;
+
+    @include breakpoint(lg) {
+      justify-content: center;
+      gap: 20px;
+    }
+
+    @include breakpoint(md) {
+      gap: 30px;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include breakpoint(xs) {
+      gap: 10px;
+    }
+  }
+
+  &__content-box > div {
+    padding: 0 10px;
+
+    @include breakpoint(md) {
+      padding: 0px;
+    }
+
+    @include breakpoint(sm) {
+      max-width: 500px;
+    }
+  }
+}
+
+.column-left {
+  max-width: 620px;
+
+  @include breakpoint(lg) {
+    max-width: 550px;
+  }
+
+  @include breakpoint(md) {
+    max-width: 430px;
+  }
+
+  &__title {
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 117%;
+
+    @include breakpoint(lg) {
+      font-size: 45px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 38px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 24px;
+    }
+  }
+
+  &__title span {
+    font-size: 65px;
+    line-height: 107%;
+
+    @include breakpoint(lg) {
+      font-size: 50px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 45px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 28px;
+    }
+  }
+
+  &__separator-variable {
+    display: none;
+
+    @include breakpoint(sm) {
+      display: block;
+      margin: 20px 0 15px;
+    }
+  }
+
+  &__subtitle-history {
+    display: none;
+
+    @include breakpoint(sm) {
+      display: block;
+    }
+  }
+
+  &__images {
+    display: flex;
+    margin: 40px 0px 27px;
+
+    @include breakpoint(md) {
+      margin: 20px 0px 20px;
+    }
+
+    @include breakpoint(sm) {
+      margin: 20px 0px 30px;
+    }
+
+    @include breakpoint(xs) {
+      margin: 20px 0px 15px;
+    }
+  }
+
+  &__text-row {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(xs) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 278px;
+    font-size: 22px;
+    line-height: 0.95;
+
+    @include breakpoint(lg) {
+      max-width: 240px;
+      font-size: 19px;
+    }
+
+    @include breakpoint(md) {
+      max-width: 202px;
+      font-size: 16px;
+      line-height: 1.1;
+    }
+
+    @include breakpoint(sm) {
+      max-width: 240px;
+      line-height: 1.2;
+    }
+
+    @include breakpoint(xs) {
+      max-width: 100%;
+      font-size: 15px;
+    }
+  }
+
+  &__separator {
+    height: 30px;
+    background-color: $color-basic;
+    border-radius: 10px;
+
+    @include breakpoint(md) {
+      height: 27px;
+      border-radius: 7px;
+    }
+
+    @include breakpoint(xs) {
+      height: 10px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.column-right {
+  position: relative;
+  align-self: flex-end;
+  max-width: 420px;
+
+  @include breakpoint(lg) {
+    max-width: 374px;
+  }
+
+  @include breakpoint(md) {
+    max-width: 245px;
+  }
+
+  @include breakpoint(sm) {
+    align-self: center;
+    justify-content: center;
+  }
+
+  &__separator-variable {
+    position: absolute;
+    top: -67px;
+    right: 0;
+
+    @include breakpoint(lg) {
+      top: -40px;
+      right: 0;
+    }
+
+    @include breakpoint(md) {
+      top: -48px;
+      right: 0;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+  &__subtitle-history {
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+  &__slogan {
+    background: $color-basic;
+    font-size: 22px;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 10px;
+
+    @include breakpoint(lg) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 15px;
+    }
+  }
+
+  &__image {
+    margin: 41px 0 35px;
+
+    @include breakpoint(lg) {
+      margin: 35px 0 35px;
+    }
+
+    @include breakpoint(md) {
+      margin: 25px 0 30px;
+    }
+
+    @include breakpoint(sm) {
+      text-align: center;
+      margin: 0px 0 20px;
+    }
+
+    @include breakpoint(xs) {
+      margin: 0px 0 10px;
+    }
+  }
+}
+
+.subtitle-history {
+  color: #938273;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: justify;
+
+  @include breakpoint(lg) {
+    font-size: 16px;
+    text-align: start;
+  }
+
+  @include breakpoint(md) {
+    font-size: 15px;
+  }
+}
+
+.separator-variable {
+  width: 570px;
+  height: 40px;
+  background: $color-basic;
+  border-radius: 10px;
+
+  @include breakpoint(lg) {
+    height: 25px;
+    max-width: 500px;
+    border-radius: 7px;
+  }
+
+  @include breakpoint(md) {
+    max-width: 390px;
+    height: 27px;
+    border-radius: 7px;
+  }
+
+  @include breakpoint(sm) {
+    max-width: 100%;
+  }
+
+  @include breakpoint(xs) {
+    height: 15px;
+    width: 100%;
+  }
+}
