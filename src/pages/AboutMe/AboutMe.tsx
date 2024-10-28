@@ -1,3 +1,5 @@
+import { Title } from '../../components/Title/Title';
+import { Home } from '../../components/Home/Home';
 import image1 from '../../components/images/aboutMe/image1.png';
 import image2 from '../../components/images/aboutMe/image2.png';
 import image3 from '../../components/images/aboutMe/image3.png';
@@ -9,7 +11,9 @@ export function AboutMe() {
     <div className="about">
       <div className="about__container _container">
         <div className="about__body">
-          <div className="about__chapter">ОБО МНЕ</div>
+          <div className="about__chapter">
+            <Title>Обо мне</Title>
+          </div>
           <div className="about__content-box">
             <div className="about__column-left column-left">
               <h2 className="column-left__title">
@@ -68,6 +72,9 @@ export function AboutMe() {
                 радио, а клиенты возвращаться вновь за заказом!
               </h4>
             </div>
+          </div>
+          <div className="about__home">
+            <Home />
           </div>
         </div>
       </div>

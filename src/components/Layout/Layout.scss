@@ -116,14 +116,14 @@ body {
   object-fit: cover;
 }
 
-// .layout {
-//   min-height: 100%;
-//   overflow: hidden;
-//   display: flex;
-//   flex-direction: column;
-//   background-color: #F0EADA;
-//   position: relative;
-// }
+.layout {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #F0EADA;
+  position: relative;
+}
 
 /////////////////////////////для всех тортов по категориям
 .cakes {

@@ -5,34 +5,15 @@ $color-basic: #acc6e6;
   background: #f0eada;
 
   &__body {
-    padding: 40px 0px 40px;
+    padding: 40px 0px 25px;
 
     @include breakpoint(sm) {
-      padding: 30px 0px 45px;
-    }
-
-    @include breakpoint(xs) {
       padding: 30px 0px 20px;
     }
   }
 
   &__chapter {
-    text-align: center;
-    font-size: 50px;
     color: #596fa0;
-    margin-bottom: 40px;
-
-    @include breakpoint(lg) {
-      font-size: 40px;
-    }
-
-    @include breakpoint(md) {
-      margin-bottom: 20px;
-    }
-
-    @include breakpoint(sm) {
-      font-size: 30px;
-    }
   }
 
   &__content-box {
@@ -69,6 +50,14 @@ $color-basic: #acc6e6;
 
     @include breakpoint(sm) {
       max-width: 500px;
+    }
+  }
+
+  &__home {
+    margin-top: 50px;
+
+    @include breakpoint(md) {
+      margin-top: 20px;
     }
   }
 }

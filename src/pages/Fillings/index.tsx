@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { Title } from '../../components/Title'
+import { Title } from '../../components/Title/Title'
 import { CakesCard } from '../../components/CakesCard'
 import { FillingsCard } from '../../components/FillingsCard'
 export function Fillings() {

@@ -1,0 +1,18 @@
+@import '../Layout/Layout.scss';
+
+.home {
+  text-align: center;
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.14;
+
+    @include breakpoint(md) {
+      font-size: 16px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+}

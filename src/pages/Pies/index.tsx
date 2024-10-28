@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
-import { Title } from '../../components/Title'
+import { Title } from '../../components/Title/Title'
 import { filterCakesByCategory } from '../../helpers/filterCakesByCategory'
 
 export function Pies() {
