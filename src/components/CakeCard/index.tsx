@@ -1,5 +1,5 @@
 import { PostData } from '../../types/interfaces'
-import { Contacts } from '../Contacts'
+import { Contacts } from '../Contacts/Contacts'
 import './CakeCard.scss'
 
 export function CakeCard(props: { post: PostData }) {

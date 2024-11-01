@@ -22,11 +22,11 @@ export function AboutMe() {
                 <span>кондитер Ольга!</span>
               </h2>
               <div className="column-left__separator-variable separator-variable"></div>
-              <h4 className="column-left__subtitle-history subtitle-history">
+              <h5 className="column-left__subtitle-history subtitle-history">
                 В 2012 году закончила БНТУ по специальности инженер-строитель автомобильных дорог. Пройдя все ступени
                 карьерной лестницы, поняла, что это не то о чём я мечтала! Проработав 9 лет по специальности, вот так, с
                 легким сердцем, я уволилась с должности начальника.
-              </h4>
+              </h5>
               <div className="column-left__images">
                 <div className="column-left__image">
                   <img src={image1} alt="" />
@@ -58,11 +58,11 @@ export function AboutMe() {
             </div>
             <div className="about__column-right column-right">
               <div className="column-right__separator-variable separator-variable"></div>
-              <h4 className="column-right__subtitle-history subtitle-history">
+              <h5 className="column-right__subtitle-history subtitle-history">
                 В 2012 году закончила БНТУ по специальности инженер-строитель автомобильных дорог. Пройдя все ступени
                 карьерной лестницы, поняла, что это не то о чём я мечтала! Проработав 9 лет по специальности, вот так, с
                 легким сердцем, я уволилась с должности начальника.
-              </h4>
+              </h5>
               <div className="column-right__image">
                 <img src={photo} alt="" />
               </div>
