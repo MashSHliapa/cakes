@@ -7,7 +7,7 @@ import open_cakes from '../images/mainMenu/open_honey.png'
 import pies from '../images/mainMenu/pies.png'
 import sets from '../images/mainMenu/sets.png'
 import fillings from '../images/mainMenu/fillings.png'
-import decor from '../images/decor.png'
+// import decor from '../images/decor.png'
 import './MainMenu.scss'
 import { NavLink } from 'react-router-dom'
 
@@ -15,7 +15,6 @@ export function MainMenu() {
   return (
     <div className="main-menu">
       <div className="main__decor">
-        <img src={decor} alt="decor" />
       </div>
       <div className="main-menu__container _container">
         <div className="main-menu__body">
