@@ -1,0 +1,100 @@
+@import '../Layout/Layout.scss';
+
+.fillings {
+  position: relative;
+  background: url('../images/fillings/fillings_chokolate.png') right bottom no-repeat #acc6e6;
+
+  &__body {
+    padding: 40px 0 30px;
+  }
+
+  &__title {
+    position: relative;
+    color: #f0eada;
+  }
+
+  &__home {
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 10px;
+    left: 340px;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 0px 55px;
+}
+
+.slick-slider {
+  min-width: 0;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+.slick-slide.slick-active.slick-center .fillings-card__body {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translate(0, -50%);
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url('../icons/vector_left.svg') center no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url('../icons/vector_right.svg') center no-repeat;
+}
+
+.slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.slider .slick-dots li {
+  display: flex;
+  margin: 0 10px;
+}
+
+.slider .slick-dots li.slick-active button {
+  background: #f0eada;
+}
+
+.slider .slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #66615c;
+}

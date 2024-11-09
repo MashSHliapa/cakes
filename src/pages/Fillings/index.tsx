@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Title } from '../../components/Title/Title'
 import { CakesCard } from '../../components/CakesCard'
-import { FillingsCard } from '../../components/FillingsCard'
+import { FillingsCard } from '../../components/FillingsCard/FillingsCard'
 export function Fillings() {
 
   const { data: posts } = useSelector((state: RootState) => state.fillings)
