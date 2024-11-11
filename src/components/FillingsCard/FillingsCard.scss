@@ -1,27 +1,62 @@
+@import '../Layout/Layout.scss';
+
 .fillings-card {
   &__body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 325px;
-    height: 490px;
+    width: 315px;
+    height: 458px;
     border-radius: 18px;
     background-color: #ffffff;
     color: #656565;
     text-align: center;
     line-height: 1.14;
     padding: 15px 19px;
+
+    @include breakpoint(lg) {
+      gap: 8px;
+      width: 260px;
+      height: 428px;
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    @include breakpoint(md) {
+      gap: 6px;
+      width: 195px;
+      height: 302px;
+      padding: 9px 10px;
+    }
   }
 
   &__image img {
-    width: 285px;
-    height: 282px;
+    width: 250px;
+    height: 250px;
     border-radius: 18px;
     border: #acc6e6 solid 1px;
+
+    @include breakpoint(lg) {
+      width: 225px;
+      height: 230px;
+      border-radius: 12px;
+    }
+
+    @include breakpoint(md) {
+      width: 182px;
+      height: 169px;
+    }
   }
 
   &__weight {
     font-size: 13px;
+
+    @include breakpoint(lg) {
+      font-size: 12px;
+    }
+    @include breakpoint(md) {
+      font-size: 10px;
+    }
   }
 
   &__name {
@@ -31,18 +66,43 @@
     color: #000000;
     min-height: 48px;
     margin: 8px 0;
+
+    @include breakpoint(lg) {
+      min-height: 46px;
+    }
+
+    @include breakpoint(md) {
+      min-height: 33px;
+      margin: 5px 0;
+    }
   }
 
   &__title {
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 5px;
+
+    @include breakpoint(lg) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 13px;
+    }
   }
 
   &__title span {
-    text-transform: none;
     display: block;
+    text-transform: none;
     font-size: 17px;
+
+    @include breakpoint(lg) {
+      font-size: 15px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 10px;
+    }
   }
 
   &__separator {
@@ -50,9 +110,22 @@
     height: 2px;
     background-color: #000000;
     margin: 0 auto;
+
+    @include breakpoint(md) {
+      width: 75px;
+      height: 1px;
+    }
   }
 
   &__text {
     font-size: 16px;
+
+    @include breakpoint(lg) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 10px;
+    }
   }
 }

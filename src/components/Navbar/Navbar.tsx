@@ -12,7 +12,7 @@ export function Navbar() {
             </a>
           </li>
           <li className="navbar__item">
-            <a className="navbar__link" href="#">
+            <a className="navbar__link" href="#fillings">
               Начинки
             </a>
           </li>

@@ -14,6 +14,11 @@ $color-basic: #acc6e6;
 
   &__chapter {
     color: #596fa0;
+    margin-bottom: 40px;
+
+    @include breakpoint(md) {
+      margin-bottom: 20px;
+    }
   }
 
   &__content-box {

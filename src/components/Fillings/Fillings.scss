@@ -2,25 +2,80 @@
 
 .fillings {
   position: relative;
-  background: url('../images/fillings/fillings_chokolate.png') right bottom no-repeat #acc6e6;
+  background: url('../images/fillings/fillings_chokolate.png') right 100px no-repeat #acc6e6;
+
+  @include breakpoint(md) {
+    background-size: 300px;
+  }
 
   &__body {
-    padding: 40px 0 30px;
+    padding: 30px 0 30px;
+
+    @include breakpoint(sm) {
+      padding: 20px 0 20px;
+    }
+  }
+
+  &__title-wrapper {
+    position: relative;
   }
 
   &__title {
-    position: relative;
     color: #f0eada;
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      margin-bottom: 15px;
+    }
   }
 
   &__home {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      margin-bottom: 15px;
+    }
   }
 
   &__image {
     position: absolute;
-    top: 10px;
-    left: 340px;
+    top: -20px;
+    left: 22%;
+
+    @include breakpoint(lg) {
+      left: 20%;
+    }
+
+    @include breakpoint(md) {
+      top: -15px;
+      left: 18%;
+    }
+
+    @include breakpoint(sm) {
+      top: -5px;
+      left: 14%;
+    }
+
+    @include breakpoint(xs) {
+      position: static;
+      margin-top: -60px;
+    }
+  }
+
+  &__image img {
+    max-width: 170px;
+
+    @include breakpoint(lg) {
+      max-width: 150px;
+    }
+
+    @include breakpoint(md) {
+      max-width: 130px;
+    }
+
+    @include breakpoint(sm) {
+      max-width: 90px;
+    }
   }
 }
 
@@ -29,6 +84,25 @@
   flex-direction: row;
   position: relative;
   padding: 0px 55px;
+
+  @include breakpoint(lg) {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(md) {
+    max-width: 740px;
+    padding: 0px 40px;
+  }
+
+  @include breakpoint(sm) {
+    max-width: 550px;
+  }
+
+  @include breakpoint(xs) {
+    max-width: 320px;
+    padding: 0px 30px;
+  }
 }
 
 .slick-slider {
@@ -43,6 +117,22 @@
   display: flex;
   justify-content: center;
   padding: 15px 0px;
+
+  @include breakpoint(lg) {
+    padding: 12px 0px;
+  }
+
+  @include breakpoint(md) {
+    padding: 9px 0px;
+  }
+
+  @include breakpoint(sm) {
+    padding: 0px;
+  }
+
+  @include breakpoint(xs) {
+    padding: 9px 0px;
+  }
 }
 
 .slick-slide.slick-active.slick-center .fillings-card__body {
@@ -63,16 +153,27 @@
   width: 40px;
   height: 40px;
   font-size: 0;
+
+  @include breakpoint(md) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include breakpoint(sm) {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+  }
 }
 
 .slider .slick-arrow.slick-prev {
   left: 0;
-  background: url('../icons/vector_left.svg') center no-repeat;
+  background: url('../icons/vector_left.svg') center/100% no-repeat;
 }
 
 .slider .slick-arrow.slick-next {
   right: 0;
-  background: url('../icons/vector_right.svg') center no-repeat;
+  background: url('../icons/vector_right.svg') center/100% no-repeat;
 }
 
 .slider .slick-dots {
@@ -85,6 +186,10 @@
 .slider .slick-dots li {
   display: flex;
   margin: 0 10px;
+
+  @include breakpoint(md) {
+    margin: 0 8px;
+  }
 }
 
 .slider .slick-dots li.slick-active button {
@@ -97,4 +202,9 @@
   height: 12px;
   border-radius: 50%;
   background: #66615c;
+
+  @include breakpoint(md) {
+    width: 8px;
+    height: 8px;
+  }
 }

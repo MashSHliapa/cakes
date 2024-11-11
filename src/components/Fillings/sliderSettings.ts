@@ -10,6 +10,13 @@ export const sliderSettings = {
 
   responsive: [
     {
+      breakpoint: 767.98,
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,
+      },
+    },
+    {
       breakpoint: 575.98,
       settings: {
         slidesToShow: 1,

@@ -5,18 +5,17 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 50px;
-    margin-bottom: 40px;
 
     @include breakpoint(lg) {
       font-size: 40px;
     }
 
     @include breakpoint(md) {
-      margin-bottom: 20px;
+      font-size: 36px;
     }
 
     @include breakpoint(sm) {
-      font-size: 30px;
+      font-size: 32px;
     }
   }
 }
