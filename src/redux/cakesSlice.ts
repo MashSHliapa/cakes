@@ -170,7 +170,7 @@ export const cakesSlice = createSlice({
       },
       {
         id: 17,
-        category: 'for_children',
+        category: 'open_cakes',
         title: 'Торт день рождение',
         subtitle: 'Десерт ',
         weight: '1300 г',

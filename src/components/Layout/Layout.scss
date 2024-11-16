@@ -120,36 +120,19 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #F0EADA;
+  background-color: #f0eada;
   position: relative;
 }
 
-/////////////////////////////для всех тортов по категориям
-.cakes {
-  background: url('../../components/images/cakes/flower_cakes_left.png') 0 130px no-repeat,
-    url('../../components/images/cakes/flower_cakes_right.png') right bottom no-repeat #baa99b;
-  background-size: 500px, 300px;
+.button {
+  background-color: #5475a4;
+  color: #f0eada;
+  border-radius: 50px;
+  line-height: 1.14;
+  padding: 20px 57px;
 
-  &__body {
-    margin: 40px;
-  }
-
-  &__title {
-  }
-
-  &__list {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 575.98px) {
-    background-size: 400px, 250px;
-
-    &__body {
-      margin: 40px 15px;
-    }
+  @include breakpoint(sm) {
+    font-size: 15px;
+    padding: 15px 41px;
   }
 }

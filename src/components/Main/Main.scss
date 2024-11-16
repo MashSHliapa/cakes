@@ -76,26 +76,14 @@
   }
 
   &__button-wrapper {
-    margin-top: 60px;
     display: flex;
-    justify-content: start;
+    margin-top: 60px;
 
     @include breakpoint(xs) {
       margin-top: 30px;
     }
   }
 
-  &__button {
-    background-color: #5475a4;
-    color: #f0eada;
-    border-radius: 50px;
-    padding: 20px 24px;
-
-    @include breakpoint(sm) {
-      font-size: 15px;
-      padding: 15px 18px;
-    }
-  }
 
   &__images {
     display: flex;

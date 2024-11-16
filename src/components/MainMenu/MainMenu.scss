@@ -12,37 +12,37 @@
     margin-bottom: 30px;
   }
 
-  &__logo-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 10px;
+  // &__logo-wrapper {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: end;
+  //   gap: 10px;
 
-    @include breakpoint(xs) {
-      flex-wrap: wrap;
-    }
-  }
+  //   @include breakpoint(xs) {
+  //     flex-wrap: wrap;
+  //   }
+  // }
 
-  &__logo {
-    @include breakpoint(xs) {
-      max-width: 150px;
-    }
-  }
+  // &__logo {
+  //   @include breakpoint(xs) {
+  //     max-width: 150px;
+  //   }
+  // }
 
-  &__separator {
-    width: 970px;
-    height: 2px;
-    background-color: #f0eada;
-    margin: 0 auto;
+  // &__separator {
+  //   width: 970px;
+  //   height: 2px;
+  //   background-color: #f0eada;
+  //   margin: 0 auto;
 
-    @include breakpoint(md) {
-      flex: 0 1 80%;
-    }
+  //   @include breakpoint(md) {
+  //     flex: 0 1 80%;
+  //   }
 
-    @include breakpoint(xs) {
-      flex: 0 1 100%;
-    }
-  }
+  //   @include breakpoint(xs) {
+  //     flex: 0 1 100%;
+  //   }
+  // }
 
   &__title {
     text-align: end;
@@ -262,19 +262,6 @@
 
     @include breakpoint(lg) {
       flex: 0 1 15%;
-    }
-  }
-
-  &__button {
-    background-color: #5475a4;
-    color: #f0eada;
-    border-radius: 50px;
-    line-height: 1.14;
-    padding: 20px 57px;
-
-    @include breakpoint(sm) {
-      font-size: 15px;
-      padding: 15px 41px;
     }
   }
 

@@ -1,0 +1,175 @@
+@import '../../components/Layout/Layout.scss';
+
+.cakes {
+  background: #f0eada;
+
+  &__logo-title .logo-title__separator {
+    background-color: #66615c;
+  }
+
+  &__body {
+    padding: 20px 0 40px;
+  }
+
+  &__title {
+    color: #000000;
+    text-align: end;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 25px 0 30px;
+
+    @include breakpoint(md) {
+      font-size: 40px;
+      margin: 11px 0 30px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 23px;
+      margin: 25px 0 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    row-gap: 25px;
+    column-gap: 25px;
+
+    @include breakpoint(sm) {
+      column-gap: 15px;
+    }
+
+    @include breakpoint(xs) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+
+  &__item {
+    flex: 0 1 345px;
+    height: 463px;
+
+    @include breakpoint(lg) {
+      height: 380px;
+    }
+
+    @include breakpoint(md) {
+      height: 280px;
+    }
+
+    @include breakpoint(sm) {
+      height: 220px;
+    }
+
+    @include breakpoint(xs) {
+      flex: 0 1 208px;
+      height: 280px;
+    }
+  }
+
+  &__item-center {
+    flex: 0 1 435px;
+
+    @include breakpoint(xs) {
+      flex: 0 1 208px;
+    }
+  }
+
+  &__item img,
+  &__item-center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__description-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 25px 0;
+
+    @include breakpoint(xs) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 1 810px;
+    padding: 0px 32px;
+
+    @include breakpoint(lg) {
+      flex: 0 1 805px;
+      padding: 20px 25px;
+    }
+
+    @include breakpoint(md) {
+      flex: 0 1 793px;
+      padding: 5px 35px 5px 25px;
+    }
+
+    @include breakpoint(sm) {
+      flex: 0 1 769px;
+      padding: 5px 15px 5px 15px;
+    }
+
+    @include breakpoint(xs) {
+      flex: 0 1 320px;
+      margin: 0 auto;
+    }
+  }
+
+  &__subtitle,
+  &__text {
+    font-size: 32px;
+    line-height: 1;
+
+    @include breakpoint(lg) {
+      font-size: 28px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 20px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    color: #26221f;
+  }
+
+  &__text {
+    margin: 20px 0 30px;
+
+    @include breakpoint(md) {
+      margin: 20px 0 15px;
+    }
+
+    @include breakpoint(sm) {
+      margin: 15px 0 10px;
+    }
+
+    @include breakpoint(xs) {
+      margin: 20px 0 10px;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: end;
+
+    @include breakpoint(xs) {
+      justify-content: center;
+    }
+  }
+}

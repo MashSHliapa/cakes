@@ -16,8 +16,8 @@ export function Main() {
               <h3 className="main__slogan">С моими десертами остаются навсегда!</h3>
             </div>
             <div className="main__button-wrapper">
-              <NavLink to="/" className="main__button">
-                Примеры работ
+              <NavLink to="/" className="main__button button">
+                Заказать
               </NavLink>
             </div>
           </div>

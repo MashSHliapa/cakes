@@ -1,0 +1,35 @@
+@import '../Layout/Layout.scss';
+
+.logo-title {
+  &__logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+
+    @include breakpoint(xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    @include breakpoint(xs) {
+      max-width: 150px;
+    }
+  }
+
+  &__separator {
+    width: 970px;
+    height: 2px;
+    background-color: #f0eada;
+    margin: 0 auto;
+
+    @include breakpoint(md) {
+      flex: 0 1 80%;
+    }
+
+    @include breakpoint(xs) {
+      flex: 0 1 100%;
+    }
+  }
+}

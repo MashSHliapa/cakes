@@ -8,20 +8,24 @@ import forWomen from '../images/mainMenu/for_women.png';
 import cakeSphere from '../images/mainMenu/cake_sphere.png';
 import pies from '../images/mainMenu/pies.png';
 import sets from '../images/mainMenu/sets.png';
-import logo from '../images/mainMenu/menu_logo.svg';
+// import logo from '../images/mainMenu/menu_logo.svg';
 import arrow from '../images/mainMenu/menu_arrow.svg';
 import './MainMenu.scss';
+import { LogoTitle } from '../LogoTitle/LogoTitle';
 
 export function MainMenu() {
   return (
     <div className="main-menu">
       <div className="main-menu__container _container">
         <div className="main-menu__body">
-          <div className="main-menu__logo-wrapper">
+          {/* <div className="main-menu__logo-wrapper">
             <div className="main-menu__logo">
               <img src={logo} alt="logo" />
             </div>
             <div className="main-menu__separator"></div>
+          </div> */}
+          <div className="main-menu__logo-title">
+            <LogoTitle />
           </div>
           <h2 className="main-menu__title">Выберите понравившийся декор из категорий</h2>
           <ul className="main-menu__list">
@@ -73,7 +77,7 @@ export function MainMenu() {
               <img src={arrow} alt="arrow" />
             </div>
             <div className="main-menu__button-wrapper">
-              <a href="#fillings" className="main-menu__button">
+              <a href="#fillings" className="main-menu__button button">
                 Начинки
               </a>
             </div>
