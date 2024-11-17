@@ -6,6 +6,7 @@ import { Main } from '../Main/Main';
 import { Fillings } from '../Fillings/Fillings';
 import './Layout.scss';
 import { OpenCakes } from '../../pages/OpenCakes/OpenCakes';
+import { CakesForLadies } from '../../pages/CakesForLadies/CakesForLadies';
 
 export function Layout() {
   return (
@@ -14,6 +15,7 @@ export function Layout() {
       <Main />
       <MainMenu />
       <OpenCakes />
+      <CakesForLadies />
       <Fillings />
       <Outlet />
       <Footer />

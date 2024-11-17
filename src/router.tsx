@@ -5,7 +5,7 @@ import { AboutMe } from './pages/AboutMe/AboutMe';
 import { CakesForWedding } from './pages/CakesForWedding';
 import { CakesForChildren } from './pages/CakesForChildren';
 import { CakesForMen } from './pages/CakesForMen';
-import { CakesForWomen } from './pages/CakesForWomen';
+import { CakesForLadies } from './pages/CakesForLadies/CakesForLadies';
 import { OpenCakes } from './pages/OpenCakes/OpenCakes';
 import { Pies } from './pages/Pies';
 import { Sets } from './pages/Sets';
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/cakes/for_women',
-        element: <CakesForWomen />,
+        element: <CakesForLadies />,
       },
       {
         path: '/cakes/open_cakes',

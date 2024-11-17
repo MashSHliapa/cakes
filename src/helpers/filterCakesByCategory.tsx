@@ -1,7 +1,6 @@
-import { PostData } from "../types/interfaces"
+import { PostData } from '../types/interfaces';
 
-export function filterCakesByCategory(category: string, cakes: PostData[]) {
-  // const filterCakes = cakes.filter((item: PostData) => item.category === category)
-  // const CakesForWomen = filterCakes.map((item: PostData) => <CakesCard post={item} key={item.id} />)
-  // return CakesForWomen
+export function filterCakesByCategory(category: string, array: PostData[]) {
+  const filterCakes = array.filter((item: PostData) => item.category === category);
+  return filterCakes;
 }

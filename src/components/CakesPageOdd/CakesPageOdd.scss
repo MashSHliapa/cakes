@@ -49,6 +49,10 @@
     }
   }
 
+  &__list > :not(:last-child) {
+    margin-bottom: 25px;
+  }
+
   &__item {
     flex: 0 1 345px;
     height: 463px;
@@ -90,7 +94,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    margin: 25px 0;
+    margin: 0px 0 25px;
 
     @include breakpoint(xs) {
       flex-wrap: wrap;
