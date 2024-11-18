@@ -3,7 +3,7 @@ import { Layout } from './components/Layout';
 // import { Main } from './components/Main'
 import { AboutMe } from './pages/AboutMe/AboutMe';
 import { CakesForWedding } from './pages/CakesForWedding';
-import { CakesForChildren } from './pages/CakesForChildren';
+import { CakesForChildren } from './pages/CakesForChildren/CakesForChildren';
 import { CakesForMen } from './pages/CakesForMen';
 import { CakesForLadies } from './pages/CakesForLadies/CakesForLadies';
 import { OpenCakes } from './pages/OpenCakes/OpenCakes';
@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '/about',
+        path: '/',
         element: <AboutMe />,
       },
       {

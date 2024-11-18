@@ -11,6 +11,12 @@
     padding: 20px 0 40px;
   }
 
+  &__box > *:not(:last-child) {
+    @include breakpoint(xs) {
+      margin-bottom: 25px;
+    }
+  }
+
   &__title {
     color: #000000;
     text-align: end;
@@ -44,8 +50,8 @@
     @include breakpoint(xs) {
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      gap: 25px;
+      row-gap: 0px;
+      column-gap: 25px;
     }
   }
 
@@ -99,6 +105,13 @@
     @include breakpoint(xs) {
       flex-wrap: wrap;
       justify-content: center;
+      margin: 0px;
+    }
+
+    &_even {
+      @include breakpoint(xs) {
+        flex-wrap: wrap-reverse;
+      }
     }
   }
 
