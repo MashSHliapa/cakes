@@ -15,7 +15,7 @@ export function CakesForLadies() {
 
   const cakesRow3 = cakeDistribution(filterCakes, 3, 6);
 
-  const cakesRow4 = cakeDistribution(filterCakes, 6, 9);
+  const cakesRow4 = cakeDistribution(filterCakes, 7, 10);
 
   return (
     <CakesPageOdd

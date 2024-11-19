@@ -1,15 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Layout } from './components/Layout';
-// import { Main } from './components/Main'
+import { Layout } from './components/Layout/Layout';
 import { AboutMe } from './pages/AboutMe/AboutMe';
-import { CakesForWedding } from './pages/CakesForWedding';
+import { CakesForWedding } from './pages/CakesForWedding/CakesForWedding';
 import { CakesForChildren } from './pages/CakesForChildren/CakesForChildren';
 import { CakesForMen } from './pages/CakesForMen';
 import { CakesForLadies } from './pages/CakesForLadies/CakesForLadies';
 import { OpenCakes } from './pages/OpenCakes/OpenCakes';
 import { Pies } from './pages/Pies';
 import { Sets } from './pages/Sets';
-import { CakesForChristening } from './pages/CakesForChristening';
+import { CakesForChristening } from './pages/CakesForChristening/CakesForChristening';
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +16,10 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        element: <></>,
+      },
+      {
+        path: '/about',
         element: <AboutMe />,
       },
       {

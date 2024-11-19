@@ -15,6 +15,10 @@ export function CakesForChildren() {
 
   const cakesRow3 = cakeDistribution(filterCakes, 3, 6);
 
+  const cakesRow4 = cakeDistribution(filterCakes, 7, 10);
+
+  const cakesRow5 = cakeDistribution(filterCakes, 10, 13);
+
   return (
     <CakesPageEven
       title="Торты для детей"
@@ -23,6 +27,8 @@ export function CakesForChildren() {
       row1={cakesRow1}
       row2={cakesRow2}
       row3={cakesRow3}
+      row4={cakesRow4}
+      row5={cakesRow5}
     />
   );
 }

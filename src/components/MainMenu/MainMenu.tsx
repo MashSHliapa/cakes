@@ -12,6 +12,8 @@ import sets from '../images/mainMenu/sets.png';
 import arrow from '../images/mainMenu/menu_arrow.svg';
 import './MainMenu.scss';
 import { LogoTitle } from '../LogoTitle/LogoTitle';
+import { NavLink } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 
 export function MainMenu() {
   return (
@@ -29,34 +31,34 @@ export function MainMenu() {
           </div>
           <h2 className="main-menu__title">Выберите понравившийся декор из категорий</h2>
           <ul className="main-menu__list">
-            <li className="main-menu__item">
+            <NavLink to="/cakes/for_wedding" className="main-menu__item">
               <img src={forWedding} alt="for-wedding" />
               <div className="main-menu__item-text">Свадебные</div>
-            </li>
-            <li className="main-menu__item">
+            </NavLink>
+            <NavLink to="/cakes/for_children" className="main-menu__item">
               <img src={forChildren} alt="for-children" />
               <div className="main-menu__item-text">Детские</div>
-            </li>
-            <li className="main-menu__item">
+            </NavLink>
+            <NavLink to="/cakes/for_christening" className="main-menu__item">
               <img src={forChristening} alt="for-christening" />
               <div className="main-menu__item-text">На Крещение</div>
-            </li>
+            </NavLink>
             <li className="main-menu__item">
               <img src={twoTier} alt="two-tier" />
               <div className="main-menu__item-text">Двухярусные</div>
             </li>
-            <li className="main-menu__item">
+            <NavLink to="/cakes/open_cakes" className="main-menu__item">
               <img src={openHoney} alt="open_honey" />
               <div className="main-menu__item-text">Открытые медовики</div>
-            </li>
+            </NavLink>
             <li className="main-menu__item">
               <img src={forMen} alt="for_men" />
               <div className="main-menu__item-text">Для джентльменов</div>
             </li>
-            <li className="main-menu__item">
+            <NavLink to="/cakes/for_women" className="main-menu__item">
               <img src={forWomen} alt="for_women" />
               <div className="main-menu__item-text">Для Леди</div>
-            </li>
+            </NavLink>
             <li className="main-menu__item">
               <img src={cakeSphere} alt="cake_sphere" />
               <div className="main-menu__item-text">Торт-сфера</div>
