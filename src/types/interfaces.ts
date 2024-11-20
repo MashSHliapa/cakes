@@ -17,4 +17,7 @@ export interface IPropsCakesPage {
   row3?: JSX.Element[];
   row4?: JSX.Element[];
   row5?: JSX.Element[];
+  row6?: JSX.Element[];
+  row7?: JSX.Element[];
+  row8?: JSX.Element[];
 }

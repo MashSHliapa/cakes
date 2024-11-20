@@ -4,10 +4,10 @@ import { filterCakesByCategory } from '../../helpers/filterCakesByCategory';
 import { CakesPageEven } from '../../components/CakesPageEven/CakesPageEven';
 import { RootState } from '../../redux/store';
 
-export function CakesForChildren() {
+export function CakesForMen() {
   const cakes = useSelector((state: RootState) => state.cakes.data);
 
-  const filterCakes = filterCakesByCategory('for_children', cakes);
+  const filterCakes = filterCakesByCategory('for_men', cakes);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);
   const cakesRow2 = cakeDistribution(filterCakes, 6, 7);
@@ -20,7 +20,7 @@ export function CakesForChildren() {
 
   return (
     <CakesPageEven
-      title="Торты для детей"
+      title="Торты для джентельменов"
       subtitle="Что такое открытый Медовик?"
       text="И какой детский праздник обходится без вкуснейшего оригинального торта? Чтоб удивить маленьких именниников, мы предлагаем огромный выбор разнообразных тортов с любыми элементами декора! Любимые персонажи из мультиков и фильмов, супергерои и прекрасные принцессы однозначно порадуют детей и их родителей!"
       row1={cakesRow1}

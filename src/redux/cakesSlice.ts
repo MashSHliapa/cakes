@@ -1,6 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import cake1 from '../components/images/cakes/for_children/cake1.jpg';
-import cake2 from '../components/images/cakes/for_children/cake2.jpg';
 import cake3 from '../components/images/cakes/for_men/cake3.jpg';
 import balls from '../components/images/cakes/for_children/balls.jpg';
 import bear from '../components/images/cakes/for_children/bear.jpg';
@@ -10,8 +8,6 @@ import balls_black from '../components/images/cakes/for_men/balls_black.jpg';
 import leopard_pink from '../components/images/cakes/for_women/leopard_pink.jpg';
 import icecreame_cakes from '../components/images/cakes/pies/icecreame_cakes.jpg';
 import pony4 from '../components/images/cakes/for_children/pony4.jpg';
-import lol3 from '../components/images/cakes/for_children/lol3.jpg';
-import for_boy from '../components/images/cakes/for_children/boy10.jpg';
 import pies1 from '../components/images/cakes/pies/pies1.jpg';
 import pies2 from '../components/images/cakes/pies/pies2.jpg';
 import pies3 from '../components/images/cakes/pies/pies3.jpg';
@@ -34,7 +30,10 @@ import wedding8 from '../components/images/cakes/for_wedding/wedding8.jpg';
 import for_men1 from '../components/images/cakes/for_men/for_men1.jpg';
 import for_men2 from '../components/images/cakes/for_men/for_men2.jpg';
 import for_men3 from '../components/images/cakes/for_men/for_men3.jpg';
-import for_men4 from '../components/images/cakes/for_men/boss43.jpg';
+import for_men4 from '../components/images/cakes/for_men/for_men4.jpg';
+import for_men5 from '../components/images/cakes/for_men/for_men5.jpg';
+import for_men7 from '../components/images/cakes/for_men/for_men7.jpg';
+import boss43 from '../components/images/cakes/for_men/boss43.jpg';
 import for_women1 from '../components/images/cakes/for_women/carrot.jpg';
 import for_women2 from '../components/images/cakes/for_women/chok3.jpg';
 import for_women3 from '../components/images/cakes/for_women/pink.jpg';
@@ -50,13 +49,34 @@ import open_heart5 from '../components/images/cakes/open/open_heart5.jpg';
 import open_heart6 from '../components/images/cakes/open/open_star.jpg';
 import open_heart1 from '../components/images/cakes/open/open_heart1.jpg';
 import open_heart2 from '../components/images/cakes/open/open_heart2.jpg';
-import brawl from '../components/images/cakes/for_children/brawl.jpg';
 import butterfly2 from '../components/images/cakes/for_children/butterfly2.jpg';
-import castle from '../components/images/cakes/for_children/castle.jpg';
+import cube8 from '../components/images/cakes/for_children/cube8.jpg';
 import football from '../components/images/cakes/for_children/football.jpg';
 import minion from '../components/images/cakes/for_children/minion.jpg';
 import pony5 from '../components/images/cakes/for_children/pony5.jpg';
 import ocean from '../components/images/cakes/for_children/ocean.jpg';
+import icecream from '../components/images/cakes/for_children/icecream2.jpg';
+import cat from '../components/images/cakes/for_children/cat.jpg';
+import doggy from '../components/images/cakes/for_children/doggy.jpg';
+import mikki from '../components/images/cakes/for_children/mikki.jpg';
+import maincraft from '../components/images/cakes/for_children/maincraft.jpg';
+import elsa from '../components/images/cakes/for_children/elsa.jpg';
+import rabbit from '../components/images/cakes/for_children/rabbit.jpg';
+import toca from '../components/images/cakes/for_children/toca.jpg';
+import bear1 from '../components/images/cakes/for_children/bear1.jpg';
+import bear4 from '../components/images/cakes/for_children/bear4.jpg';
+import sonic from '../components/images/cakes/for_children/sonic.jpg';
+import kitty from '../components/images/cakes/for_children/kitty.jpg';
+import ralli from '../components/images/cakes/for_children/ralli.jpg';
+import two_tier1 from '../components/images/cakes/two_tier/two_tier1.jpg';
+import two_tier2 from '../components/images/cakes/two_tier/two_tier2.jpg';
+import two_tier3 from '../components/images/cakes/two_tier/two_tier3.jpg';
+import two_tier4 from '../components/images/cakes/two_tier/two_tier4.jpg';
+import two_tier5 from '../components/images/cakes/two_tier/two_tier5.jpg';
+import two_tier6 from '../components/images/cakes/two_tier/two_tier6.jpg';
+import two_tier7 from '../components/images/cakes/two_tier/two_tier7.jpg';
+
+
 
 export const cakesSlice = createSlice({
   name: 'cakes',
@@ -118,6 +138,41 @@ export const cakesSlice = createSlice({
         image: christening3,
       },
       {
+        id: 52,
+        category: 'two_tier',
+        image: two_tier1,
+      },
+      {
+        id: 74,
+        category: 'two_tier',
+        image: two_tier2,
+      },
+      {
+        id: 75,
+        category: 'two_tier',
+        image: two_tier3,
+      },
+      {
+        id: 76,
+        category: 'two_tier',
+        image: two_tier4,
+      },
+      {
+        id: 77,
+        category: 'two_tier',
+        image: two_tier7,
+      },
+      {
+        id: 78,
+        category: 'two_tier',
+        image: two_tier6,
+      },
+      {
+        id: 80,
+        category: 'two_tier',
+        image: two_tier5,
+      },
+      {
         id: 12,
         category: 'for_women',
         image: for_women6,
@@ -125,12 +180,8 @@ export const cakesSlice = createSlice({
       {
         id: 13,
         category: 'for_men',
-        image: cake3,
-      },
-      {
-        id: 14,
-        category: 'for_children',
-        image: balls,
+
+        image: boss43,
       },
       {
         id: 15,
@@ -140,12 +191,42 @@ export const cakesSlice = createSlice({
       {
         id: 16,
         category: 'for_men',
-        image: balls_black,
+        image: cake3,
       },
       {
-        id: 17,
-        category: 'for_children',
-        image: lol3,
+        id: 24,
+        category: 'for_men',
+        image: for_men4,
+      },
+      {
+        id: 27,
+        category: 'for_men',
+        image: for_men3,
+      },
+      {
+        id: 28,
+        category: 'for_men',
+        image: for_men2,
+      },
+      {
+        id: 36,
+        category: 'for_men',
+        image: for_men1,
+      },
+      {
+        id: 70,
+        category: 'for_men',
+        image: for_men5,
+      },
+      {
+        id: 72,
+        category: 'for_men',
+        image: for_men7,
+      },
+      {
+        id: 71,
+        category: 'for_men',
+        image: balls_black,
       },
       {
         id: 18,
@@ -177,11 +258,7 @@ export const cakesSlice = createSlice({
         category: 'open_cakes',
         image: bear,
       },
-      {
-        id: 24,
-        category: 'for_men',
-        image: for_men4,
-      },
+
       {
         id: 25,
         category: 'pie',
@@ -192,16 +269,7 @@ export const cakesSlice = createSlice({
         category: 'for_women',
         image: for_women8,
       },
-      {
-        id: 27,
-        category: 'for_men',
-        image: for_men3,
-      },
-      {
-        id: 28,
-        category: 'for_men',
-        image: for_men2,
-      },
+
       {
         id: 29,
         category: 'for_women',
@@ -228,20 +296,11 @@ export const cakesSlice = createSlice({
         image: for_women5,
       },
       {
-        id: 34,
-        category: 'for_children',
-        image: cake1,
-      },
-      {
         id: 35,
         category: 'for_women',
         image: for_women7,
       },
-      {
-        id: 36,
-        category: 'for_men',
-        image: for_men1,
-      },
+
       {
         id: 37,
         category: 'for_women',
@@ -261,11 +320,6 @@ export const cakesSlice = createSlice({
         id: 40,
         category: 'open_cakes',
         image: open_heart3,
-      },
-      {
-        id: 41,
-        category: 'for_children',
-        image: pony4,
       },
       {
         id: 42,
@@ -292,16 +346,7 @@ export const cakesSlice = createSlice({
         category: 'set',
         image: set5,
       },
-      {
-        id: 47,
-        category: 'for_children',
-        image: cake2,
-      },
-      {
-        id: 48,
-        category: 'for_children',
-        image: butterfly,
-      },
+
       {
         id: 49,
         category: 'for_women',
@@ -313,15 +358,41 @@ export const cakesSlice = createSlice({
         image: open_heart4,
       },
       {
-        id: 51,
+        id: 14,
         category: 'for_children',
-        image: for_boy,
+        image: balls,
       },
       {
-        id: 52,
+        id: 17,
         category: 'for_children',
-        image: brawl,
+        image: football,
       },
+      {
+        id: 34,
+        category: 'for_children',
+        image: cube8,
+      },
+      {
+        id: 41,
+        category: 'for_children',
+        image: cat,
+      },
+      {
+        id: 47,
+        category: 'for_children',
+        image: sonic,
+      },
+      {
+        id: 48,
+        category: 'for_children',
+        image: butterfly,
+      },
+      {
+        id: 51,
+        category: 'for_children',
+        image: pony4,
+      },
+
       {
         id: 53,
         category: 'for_children',
@@ -330,12 +401,12 @@ export const cakesSlice = createSlice({
       {
         id: 54,
         category: 'for_children',
-        image: castle,
+        image: kitty,
       },
       {
         id: 55,
         category: 'for_children',
-        image: football,
+        image: pony5,
       },
       {
         id: 56,
@@ -350,7 +421,57 @@ export const cakesSlice = createSlice({
       {
         id: 58,
         category: 'for_children',
-        image: pony5,
+        image: bear4,
+      },
+      {
+        id: 59,
+        category: 'for_children',
+        image: mikki,
+      },
+      {
+        id: 60,
+        category: 'for_children',
+        image: ralli,
+      },
+      {
+        id: 61,
+        category: 'for_children',
+        image: icecream,
+      },
+      {
+        id: 62,
+        category: 'for_children',
+        image: maincraft,
+      },
+      {
+        id: 63,
+        category: 'for_children',
+        image: doggy,
+      },
+      {
+        id: 64,
+        category: 'for_children',
+        image: elsa,
+      },
+      {
+        id: 65,
+        category: 'for_children',
+        image: rabbit,
+      },
+      {
+        id: 66,
+        category: 'for_children',
+        image: toca,
+      },
+      {
+        id: 67,
+        category: 'for_children',
+        image: bear1,
+      },
+      {
+        id: 68,
+        category: 'for_children',
+        image: bear4,
       },
     ],
   },

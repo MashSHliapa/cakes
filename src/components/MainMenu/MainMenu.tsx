@@ -43,18 +43,18 @@ export function MainMenu() {
               <img src={forChristening} alt="for-christening" />
               <div className="main-menu__item-text">На Крещение</div>
             </NavLink>
-            <li className="main-menu__item">
+            <NavLink to="/cakes/two_tier" className="main-menu__item">
               <img src={twoTier} alt="two-tier" />
               <div className="main-menu__item-text">Двухярусные</div>
-            </li>
+            </NavLink>
             <NavLink to="/cakes/open_cakes" className="main-menu__item">
               <img src={openHoney} alt="open_honey" />
               <div className="main-menu__item-text">Открытые медовики</div>
             </NavLink>
-            <li className="main-menu__item">
+            <NavLink to="/cakes/for_men" className="main-menu__item">
               <img src={forMen} alt="for_men" />
               <div className="main-menu__item-text">Для джентльменов</div>
-            </li>
+            </NavLink>
             <NavLink to="/cakes/for_women" className="main-menu__item">
               <img src={forWomen} alt="for_women" />
               <div className="main-menu__item-text">Для Леди</div>
