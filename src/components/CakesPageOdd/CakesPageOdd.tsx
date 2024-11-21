@@ -26,6 +26,9 @@ export function CakesPageOdd(props: IPropsCakesPage) {
             <div className="cakes__list">{props.row3}</div>
             <div className="cakes__list">{props.row4}</div>
             <div className="cakes__list">{props.row5}</div>
+            <div className="cakes__list">{props.row6}</div>
+            <div className="cakes__list">{props.row7}</div>
+            <div className="cakes__list">{props.row8}</div>
           </div>
         </div>
       </div>

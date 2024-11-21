@@ -43,6 +43,12 @@ import for_women6 from '../components/images/cakes/for_women/women2.jpg';
 import for_women7 from '../components/images/cakes/for_women/women3.jpg';
 import for_women8 from '../components/images/cakes/for_women/women4.jpg';
 import for_women9 from '../components/images/cakes/for_women/yellow.jpg';
+import for_women11 from '../components/images/cakes/for_women/for_women11.jpg';
+import for_women12 from '../components/images/cakes/for_women/for_women12.jpg';
+import for_women13 from '../components/images/cakes/for_women/for_women13.jpg';
+import for_women14 from '../components/images/cakes/for_women/for_women14.jpg';
+import for_women15 from '../components/images/cakes/for_women/for_women15.jpg';
+import for_women16 from '../components/images/cakes/for_women/for_women16.jpg';
 import open_heart3 from '../components/images/cakes/open/open_heart3.jpg';
 import open_heart4 from '../components/images/cakes/open/open_heart4.jpg';
 import open_heart5 from '../components/images/cakes/open/open_heart5.jpg';
@@ -75,8 +81,16 @@ import two_tier4 from '../components/images/cakes/two_tier/two_tier4.jpg';
 import two_tier5 from '../components/images/cakes/two_tier/two_tier5.jpg';
 import two_tier6 from '../components/images/cakes/two_tier/two_tier6.jpg';
 import two_tier7 from '../components/images/cakes/two_tier/two_tier7.jpg';
-
-
+import sphere1 from '../components/images/cakes/sphere/sphere1.jpg';
+import sphere2 from '../components/images/cakes/sphere/sphere2.jpg';
+import sphere3 from '../components/images/cakes/sphere/sphere3.jpg';
+import sphere4 from '../components/images/cakes/sphere/sphere4.jpg';
+import sphere5 from '../components/images/cakes/sphere/sphere5.jpg';
+import sphere6 from '../components/images/cakes/sphere/sphere6.jpg';
+import sphere7 from '../components/images/cakes/sphere/sphere7.jpg';
+import sphere8 from '../components/images/cakes/sphere/sphere8.jpg';
+import sphere9 from '../components/images/cakes/sphere/sphere9.jpg';
+import sphere10 from '../components/images/cakes/sphere/sphere10.jpg';
 
 export const cakesSlice = createSlice({
   name: 'cakes',
@@ -117,6 +131,7 @@ export const cakesSlice = createSlice({
         category: 'for_wedding',
         image: wedding9,
       },
+      //////////////////////// for_christening
       {
         id: 8,
         category: 'for_christening',
@@ -137,6 +152,7 @@ export const cakesSlice = createSlice({
         category: 'for_christening',
         image: christening3,
       },
+      /////////////////////////// two_tier
       {
         id: 52,
         category: 'two_tier',
@@ -172,15 +188,46 @@ export const cakesSlice = createSlice({
         category: 'two_tier',
         image: two_tier5,
       },
+      ///////////////////////// open_cakes
       {
-        id: 12,
-        category: 'for_women',
-        image: for_women6,
+        id: 19,
+        category: 'open_cakes',
+        image: open_heart1,
       },
+      {
+        id: 20,
+        category: 'open_cakes',
+        image: open_heart5,
+      },
+      {
+        id: 23,
+        category: 'open_cakes',
+        image: bear,
+      },
+      {
+        id: 30,
+        category: 'open_cakes',
+        image: open_heart6,
+      },
+      {
+        id: 38,
+        category: 'open_cakes',
+        image: open_heart2,
+      },
+      {
+        id: 40,
+        category: 'open_cakes',
+        image: open_heart3,
+      },
+      {
+        id: 50,
+        category: 'open_cakes',
+        image: open_heart4,
+      },
+      //////////////////// for_men
       {
         id: 13,
         category: 'for_men',
-
         image: boss43,
       },
       {
@@ -228,67 +275,26 @@ export const cakesSlice = createSlice({
         category: 'for_men',
         image: balls_black,
       },
+      /////////////////////////////// for_women
       {
-        id: 18,
-        category: 'pie',
-        image: icecreame_cakes,
-      },
-      {
-        id: 19,
-        category: 'open_cakes',
-        image: open_heart1,
-      },
-      {
-        id: 20,
-        category: 'open_cakes',
-        image: open_heart5,
-      },
-      {
-        id: 21,
-        category: 'pie',
-        image: pies1,
-      },
-      {
-        id: 22,
-        category: 'set',
-        image: set1,
-      },
-      {
-        id: 23,
-        category: 'open_cakes',
-        image: bear,
-      },
-
-      {
-        id: 25,
-        category: 'pie',
-        image: pies4,
+        id: 12,
+        category: 'for_women',
+        image: for_women6,
       },
       {
         id: 26,
         category: 'for_women',
         image: for_women8,
       },
-
       {
         id: 29,
         category: 'for_women',
         image: leopard_pink,
       },
       {
-        id: 30,
-        category: 'open_cakes',
-        image: open_heart6,
-      },
-      {
         id: 31,
         category: 'for_women',
         image: for_women1,
-      },
-      {
-        id: 32,
-        category: 'set',
-        image: set2,
       },
       {
         id: 33,
@@ -300,31 +306,10 @@ export const cakesSlice = createSlice({
         category: 'for_women',
         image: for_women7,
       },
-
       {
         id: 37,
         category: 'for_women',
         image: for_women9,
-      },
-      {
-        id: 38,
-        category: 'open_cakes',
-        image: open_heart2,
-      },
-      {
-        id: 39,
-        category: 'pie',
-        image: pies2,
-      },
-      {
-        id: 40,
-        category: 'open_cakes',
-        image: open_heart3,
-      },
-      {
-        id: 42,
-        category: 'pie',
-        image: pies3,
       },
       {
         id: 43,
@@ -337,6 +322,129 @@ export const cakesSlice = createSlice({
         image: for_women2,
       },
       {
+        id: 49,
+        category: 'for_women',
+        image: for_women4,
+      },
+      {
+        id: 99,
+        category: 'for_women',
+        image: for_women11,
+      },
+      {
+        id: 100,
+        category: 'for_women',
+        image: for_women12,
+      },
+      {
+        id: 101,
+        category: 'for_women',
+        image: for_women13,
+      },
+      {
+        id: 102,
+        category: 'for_women',
+        image: for_women16,
+      },
+      {
+        id: 103,
+        category: 'for_women',
+        image: for_women15,
+      },
+      {
+        id: 104,
+        category: 'for_women',
+        image: for_women14,
+      },
+      ///////////////////////// sphere
+      {
+        id: 90,
+        category: 'sphere',
+        image: sphere2,
+      },
+      {
+        id: 91,
+        category: 'sphere',
+        image: sphere1,
+      },
+      {
+        id: 92,
+        category: 'sphere',
+        image: sphere3,
+      },
+      {
+        id: 93,
+        category: 'sphere',
+        image: sphere4,
+      },
+      {
+        id: 94,
+        category: 'sphere',
+        image: sphere6,
+      },
+      {
+        id: 95,
+        category: 'sphere',
+        image: sphere5,
+      },
+      {
+        id: 96,
+        category: 'sphere',
+        image: sphere7,
+      },
+      {
+        id: 97,
+        category: 'sphere',
+        image: sphere9,
+      },
+      {
+        id: 98,
+        category: 'sphere',
+        image: sphere8,
+      },
+      {
+        id: 99,
+        category: 'sphere',
+        image: sphere10,
+      },
+      ////////////////////////// pie
+      {
+        id: 18,
+        category: 'pie',
+        image: icecreame_cakes,
+      },
+      {
+        id: 25,
+        category: 'pie',
+        image: pies4,
+      },
+      {
+        id: 21,
+        category: 'pie',
+        image: pies1,
+      },
+      {
+        id: 39,
+        category: 'pie',
+        image: pies2,
+      },
+      {
+        id: 42,
+        category: 'pie',
+        image: pies3,
+      },
+      ////////////////////////// sets
+      {
+        id: 22,
+        category: 'set',
+        image: set1,
+      },
+      {
+        id: 32,
+        category: 'set',
+        image: set2,
+      },
+      {
         id: 45,
         category: 'set',
         image: set3,
@@ -346,17 +454,7 @@ export const cakesSlice = createSlice({
         category: 'set',
         image: set5,
       },
-
-      {
-        id: 49,
-        category: 'for_women',
-        image: for_women4,
-      },
-      {
-        id: 50,
-        category: 'open_cakes',
-        image: open_heart4,
-      },
+      /////////////////////////// for_children
       {
         id: 14,
         category: 'for_children',

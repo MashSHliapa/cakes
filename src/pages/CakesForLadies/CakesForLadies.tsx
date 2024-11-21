@@ -16,6 +16,8 @@ export function CakesForLadies() {
   const cakesRow3 = cakeDistribution(filterCakes, 3, 6);
 
   const cakesRow4 = cakeDistribution(filterCakes, 7, 10);
+  const cakesRow5 = cakeDistribution(filterCakes, 10, 13);
+  const cakesRow6 = cakeDistribution(filterCakes, 13, 16);
 
   return (
     <CakesPageOdd
@@ -26,6 +28,8 @@ export function CakesForLadies() {
       row2={cakesRow2}
       row3={cakesRow3}
       row4={cakesRow4}
+      row5={cakesRow5}
+      row6={cakesRow6}
     />
   );
 }

@@ -10,6 +10,7 @@ import { Pies } from './pages/Pies';
 import { Sets } from './pages/Sets';
 import { CakesForChristening } from './pages/CakesForChristening/CakesForChristening';
 import { CakesTwoTier } from './pages/CakesTwoTier/CakesTwoTier';
+import { Sphere } from './pages/Sphere/Sphere';
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: '/cakes/open_cakes',
         element: <OpenCakes />,
+      },
+      {
+        path: '/cakes/sphere',
+        element: <Sphere />,
       },
       {
         path: '/cakes/pies',

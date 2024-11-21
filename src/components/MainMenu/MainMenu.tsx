@@ -13,7 +13,6 @@ import arrow from '../images/mainMenu/menu_arrow.svg';
 import './MainMenu.scss';
 import { LogoTitle } from '../LogoTitle/LogoTitle';
 import { NavLink } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
 
 export function MainMenu() {
   return (
@@ -59,10 +58,10 @@ export function MainMenu() {
               <img src={forWomen} alt="for_women" />
               <div className="main-menu__item-text">Для Леди</div>
             </NavLink>
-            <li className="main-menu__item">
-              <img src={cakeSphere} alt="cake_sphere" />
+            <NavLink to="/cakes/sphere" className="main-menu__item">
+              <img src={cakeSphere} alt="sphere" />
               <div className="main-menu__item-text">Торт-сфера</div>
-            </li>
+            </NavLink>
             <li className="main-menu__item">
               <img src={pies} alt="pies" />
               <div className="main-menu__item-text">Пирожные</div>
