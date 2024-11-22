@@ -6,20 +6,28 @@ import cherry from '../components/images/cakes/for_men/cherry.jpg';
 import butterfly from '../components/images/cakes/for_children/butterfly.jpg';
 import balls_black from '../components/images/cakes/for_men/balls_black.jpg';
 import leopard_pink from '../components/images/cakes/for_women/leopard_pink.jpg';
-import icecreame_cakes from '../components/images/cakes/pies/icecreame_cakes.jpg';
 import pony4 from '../components/images/cakes/for_children/pony4.jpg';
 import pies1 from '../components/images/cakes/pies/pies1.jpg';
 import pies2 from '../components/images/cakes/pies/pies2.jpg';
 import pies3 from '../components/images/cakes/pies/pies3.jpg';
-import pies4 from '../components/images/cakes/pies/popsicle1.jpg';
+import pies4 from '../components/images/cakes/pies/pies4.jpg';
+import pies5 from '../components/images/cakes/pies/pies5.jpg';
+import pies6 from '../components/images/cakes/pies/pies6.jpg';
+import pies7 from '../components/images/cakes/pies/pies7.jpg';
 import set1 from '../components/images/cakes/sets/set1.jpg';
 import set2 from '../components/images/cakes/sets/set2.jpg';
 import set3 from '../components/images/cakes/sets/set3.jpg';
+import set4 from '../components/images/cakes/sets/set4.jpg';
 import set5 from '../components/images/cakes/sets/set5.jpg';
+import set6 from '../components/images/cakes/sets/set6.jpg';
+import set7 from '../components/images/cakes/sets/set7.jpg';
 import christening1 from '../components/images/cakes/for_christening/christening1.jpg';
 import christening2 from '../components/images/cakes/for_christening/christening2.jpg';
 import christening3 from '../components/images/cakes/for_christening/christening3.jpg';
 import christening4 from '../components/images/cakes/for_christening/christening4.jpg';
+import christening5 from '../components/images/cakes/for_christening/christening5.jpg';
+import christening6 from '../components/images/cakes/for_christening/christening6.jpg';
+import christening7 from '../components/images/cakes/for_christening/christening7.jpg';
 import wedding1 from '../components/images/cakes/for_wedding/wedding1.jpg';
 import wedding2 from '../components/images/cakes/for_wedding/wedding2.jpg';
 import wedding3 from '../components/images/cakes/for_wedding/wedding3.jpg';
@@ -37,8 +45,8 @@ import boss43 from '../components/images/cakes/for_men/boss43.jpg';
 import for_women1 from '../components/images/cakes/for_women/carrot.jpg';
 import for_women2 from '../components/images/cakes/for_women/chok3.jpg';
 import for_women3 from '../components/images/cakes/for_women/pink.jpg';
-import for_women4 from '../components/images/cakes/for_women/raspberries.jpg';
-import for_women5 from '../components/images/cakes/for_women/strawberry.jpg';
+import for_women5 from '../components/images/cakes/for_women/raspberries.jpg';
+import for_women4 from '../components/images/cakes/for_women/for_women4.jpg';
 import for_women6 from '../components/images/cakes/for_women/women2.jpg';
 import for_women7 from '../components/images/cakes/for_women/women3.jpg';
 import for_women8 from '../components/images/cakes/for_women/women4.jpg';
@@ -151,6 +159,21 @@ export const cakesSlice = createSlice({
         id: 11,
         category: 'for_christening',
         image: christening3,
+      },
+      {
+        id: 129,
+        category: 'for_christening',
+        image: christening5,
+      },
+      {
+        id: 130,
+        category: 'for_christening',
+        image: christening6,
+      },
+      {
+        id: 131,
+        category: 'for_christening',
+        image: christening7,
       },
       /////////////////////////// two_tier
       {
@@ -407,32 +430,43 @@ export const cakesSlice = createSlice({
         category: 'sphere',
         image: sphere10,
       },
-      ////////////////////////// pie
+      ////////////////////////// pies
       {
         id: 18,
-        category: 'pie',
-        image: icecreame_cakes,
-      },
-      {
-        id: 25,
-        category: 'pie',
-        image: pies4,
-      },
-      {
-        id: 21,
         category: 'pie',
         image: pies1,
       },
       {
-        id: 39,
+        id: 25,
         category: 'pie',
         image: pies2,
       },
       {
-        id: 42,
+        id: 21,
         category: 'pie',
         image: pies3,
       },
+      {
+        id: 39,
+        category: 'pie',
+        image: pies4,
+      },
+      {
+        id: 42,
+        category: 'pie',
+        image: pies5,
+      },
+      {
+        id: 120,
+        category: 'pie',
+        image: pies6,
+      },
+      {
+        id: 128,
+        category: 'pie',
+        image: pies7,
+      },
+
       ////////////////////////// sets
       {
         id: 22,
@@ -450,9 +484,24 @@ export const cakesSlice = createSlice({
         image: set3,
       },
       {
+        id: 126,
+        category: 'set',
+        image: set4,
+      },
+      {
         id: 46,
         category: 'set',
         image: set5,
+      },
+      {
+        id: 125,
+        category: 'set',
+        image: set6,
+      },
+      {
+        id: 121,
+        category: 'set',
+        image: set7,
       },
       /////////////////////////// for_children
       {

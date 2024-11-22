@@ -62,14 +62,14 @@ export function MainMenu() {
               <img src={cakeSphere} alt="sphere" />
               <div className="main-menu__item-text">Торт-сфера</div>
             </NavLink>
-            <li className="main-menu__item">
+            <NavLink to="/cakes/pies" className="main-menu__item">
               <img src={pies} alt="pies" />
               <div className="main-menu__item-text">Пирожные</div>
-            </li>
-            <li className="main-menu__item">
+            </NavLink>
+            <NavLink to="/cakes/sets" className="main-menu__item">
               <img src={sets} alt="sets" />
               <div className="main-menu__item-text">Наборы</div>
-            </li>
+            </NavLink>
           </ul>
           <div className="main-menu__subtitle">Также можно изменить выбранный декор по Вашему усмотрению</div>
           <div className="main-menu__fillings-box">
