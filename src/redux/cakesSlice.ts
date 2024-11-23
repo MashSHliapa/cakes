@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import cake3 from '../components/images/cakes/for_men/cake3.jpg';
 import balls from '../components/images/cakes/for_children/balls.jpg';
-import bear from '../components/images/cakes/for_children/bear.jpg';
 import cherry from '../components/images/cakes/for_men/cherry.jpg';
 import butterfly from '../components/images/cakes/for_children/butterfly.jpg';
 import balls_black from '../components/images/cakes/for_men/balls_black.jpg';
@@ -57,12 +56,13 @@ import for_women13 from '../components/images/cakes/for_women/for_women13.jpg';
 import for_women14 from '../components/images/cakes/for_women/for_women14.jpg';
 import for_women15 from '../components/images/cakes/for_women/for_women15.jpg';
 import for_women16 from '../components/images/cakes/for_women/for_women16.jpg';
-import open_heart3 from '../components/images/cakes/open/open_heart3.jpg';
 import open_heart4 from '../components/images/cakes/open/open_heart4.jpg';
 import open_heart5 from '../components/images/cakes/open/open_heart5.jpg';
 import open_heart6 from '../components/images/cakes/open/open_star.jpg';
 import open_heart1 from '../components/images/cakes/open/open_heart1.jpg';
 import open_heart2 from '../components/images/cakes/open/open_heart2.jpg';
+import open3 from '../components/images/cakes/open/open3.jpg';
+import open6 from '../components/images/cakes/open/open6.jpg';
 import butterfly2 from '../components/images/cakes/for_children/butterfly2.jpg';
 import cube8 from '../components/images/cakes/for_children/cube8.jpg';
 import football from '../components/images/cakes/for_children/football.jpg';
@@ -225,7 +225,7 @@ export const cakesSlice = createSlice({
       {
         id: 23,
         category: 'open_cakes',
-        image: bear,
+        image: open3,
       },
       {
         id: 30,
@@ -240,7 +240,7 @@ export const cakesSlice = createSlice({
       {
         id: 40,
         category: 'open_cakes',
-        image: open_heart3,
+        image: open6,
       },
       {
         id: 50,

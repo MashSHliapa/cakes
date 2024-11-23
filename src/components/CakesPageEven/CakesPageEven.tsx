@@ -23,11 +23,14 @@ export function CakesPageEven(props: IPropsCakesPage) {
               </div>
             </div>
             <div className="cakes__list">{props.row3}</div>
-            <div className="cakes__list">{props.row4}</div>
-            <div className="cakes__list">{props.row5}</div>
-            <div className="cakes__list">{props.row6}</div>
-            <div className="cakes__list">{props.row7}</div>
-            <div className="cakes__list">{props.row8}</div>
+            {[props.row4, props.row5, props.row6, props.row7, props.row8].map(
+              (row, index) =>
+                row && (
+                  <div className="cakes__list" key={index}>
+                    {row}
+                  </div>
+                ),
+            )}
           </div>
         </div>
       </div>
