@@ -56,11 +56,11 @@ import for_women13 from '../components/images/cakes/for_women/for_women13.jpg';
 import for_women14 from '../components/images/cakes/for_women/for_women14.jpg';
 import for_women15 from '../components/images/cakes/for_women/for_women15.jpg';
 import for_women16 from '../components/images/cakes/for_women/for_women16.jpg';
-import open_heart4 from '../components/images/cakes/open/open_heart4.jpg';
-import open_heart5 from '../components/images/cakes/open/open_heart5.jpg';
-import open_heart6 from '../components/images/cakes/open/open_star.jpg';
-import open_heart1 from '../components/images/cakes/open/open_heart1.jpg';
-import open_heart2 from '../components/images/cakes/open/open_heart2.jpg';
+import open7 from '../components/images/cakes/open/open7.jpg';
+import open1 from '../components/images/cakes/open/open1.jpg';
+import open4 from '../components/images/cakes/open/open4.jpg';
+import open2 from '../components/images/cakes/open/open2.jpg';
+import open5 from '../components/images/cakes/open//open5.jpg';
 import open3 from '../components/images/cakes/open/open3.jpg';
 import open6 from '../components/images/cakes/open/open6.jpg';
 import butterfly2 from '../components/images/cakes/for_children/butterfly2.jpg';
@@ -215,12 +215,12 @@ export const cakesSlice = createSlice({
       {
         id: 19,
         category: 'open_cakes',
-        image: open_heart1,
+        image: open1,
       },
       {
         id: 20,
         category: 'open_cakes',
-        image: open_heart5,
+        image: open2,
       },
       {
         id: 23,
@@ -230,12 +230,12 @@ export const cakesSlice = createSlice({
       {
         id: 30,
         category: 'open_cakes',
-        image: open_heart6,
+        image: open4,
       },
       {
         id: 38,
         category: 'open_cakes',
-        image: open_heart2,
+        image: open5,
       },
       {
         id: 40,
@@ -245,7 +245,7 @@ export const cakesSlice = createSlice({
       {
         id: 50,
         category: 'open_cakes',
-        image: open_heart4,
+        image: open7,
       },
       //////////////////// for_men
       {

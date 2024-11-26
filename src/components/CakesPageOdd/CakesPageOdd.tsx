@@ -1,4 +1,5 @@
 import { LogoTitle } from '../LogoTitle/LogoTitle';
+import { GoToTop } from '../GoToTop/GoToTop';
 import { IPropsCakesPage } from '../../types/interfaces';
 import './CakesPageOdd.scss';
 
@@ -33,6 +34,9 @@ export function CakesPageOdd(props: IPropsCakesPage) {
                 ),
             )}
           </div>
+        </div>
+        <div className="cakes__go-to-top">
+          <GoToTop />
         </div>
       </div>
     </div>

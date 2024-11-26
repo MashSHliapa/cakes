@@ -16,7 +16,7 @@ import './MainMenu.scss';
 
 export function MainMenu() {
   function scrollToCakes() {
-    scrollToPage('cakes');
+    setTimeout(() =>scrollToPage('cakes'), 200);
   }
 
   return (

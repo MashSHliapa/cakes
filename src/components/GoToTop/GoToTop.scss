@@ -1,0 +1,19 @@
+@import '../Layout/Layout.scss';
+
+.go-to-top {
+  &__button {
+    display: none;
+  }
+
+  &__button._active {
+    @include breakpoint(md) {
+      display: block;
+      position: fixed;
+      top: 50%;
+      right: 15px;
+      z-index: 20;
+      transform: translate(0, -50%);
+      cursor: pointer;
+    }
+  }
+}

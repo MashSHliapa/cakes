@@ -1,4 +1,5 @@
 import { LogoTitle } from '../LogoTitle/LogoTitle';
+import { GoToTop } from '../GoToTop/GoToTop';
 import { IPropsCakesPage } from '../../types/interfaces';
 
 export function CakesPageEven(props: IPropsCakesPage) {
@@ -32,6 +33,9 @@ export function CakesPageEven(props: IPropsCakesPage) {
                 ),
             )}
           </div>
+        </div>
+        <div className="cakes__go-to-top">
+          <GoToTop />
         </div>
       </div>
     </div>
