@@ -5,7 +5,7 @@ export function Home() {
   return (
     <div className="home">
       <NavLink to="/" target="_top" className="home__text">
-        На главную
+        На Главную
       </NavLink>
     </div>
   );

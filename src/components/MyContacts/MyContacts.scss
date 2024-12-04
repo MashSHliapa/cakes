@@ -1,17 +1,10 @@
 @import '../Layout/Layout.scss';
 
-.contacts {
-  &__phone,
-  &__email {
-    font-size: 25px;
-
-    @include breakpoint(sm) {
-      font-size: 20px;
-    }
-
-    @include breakpoint(xs) {
-      font-size: 18px;
-    }
+.my-contacts {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__email {
@@ -33,5 +26,19 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  &__address {
+    line-height: 1.16;
+
+    @include breakpoint(md) {
+      line-height: 1.2;
+    }
+
+    @include breakpoint(sm) {
+    }
+
+    @include breakpoint(xs) {
+    }
   }
 }

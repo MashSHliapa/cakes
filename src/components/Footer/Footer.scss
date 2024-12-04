@@ -38,7 +38,7 @@
 
     @include breakpoint(sm) {
       justify-content: start;
-      row-gap: 30px;
+      row-gap: 40px;
     }
   }
 
@@ -116,34 +116,50 @@
   }
 }
 
-.subtitle {
-  font-size: 18px;
-  color: #f0eada;
-  line-height: inherit;
-  margin-bottom: 15px;
-}
-
-.contacts {
-  &__data {
-    margin-bottom: 35px;
-
-    @include breakpoint(lg) {
-      margin-bottom: 24px;
-    }
-
-    @include breakpoint(md) {
-      margin-bottom: 20px;
-    }
+.my-contacts {
+  &__my-contacts .my-contacts__subtitle {
+    color: #f0eada;
   }
 
-  &__address {
+  &__my-contacts {
+    color: #e9e9e9;
+  }
+
+  &__my-contacts .my-contacts__address {
     font-size: 25px;
-    line-height: 1.16;
 
     @include breakpoint(md) {
       font-size: 22px;
-      line-height: 1.2;
     }
+
+    @include breakpoint(sm) {
+      font-size: 20px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 18px;
+    }
+  }
+
+  &__my-contacts .my-contacts__subtitle {
+    margin-bottom: 15px;
+  }
+
+  &__my-contacts .my-contacts__contacts {
+    margin-bottom: 35px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 25px;
+    }
+
+    @include breakpoint(md) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__my-contacts .my-contacts__phone,
+  &__my-contacts .my-contacts__email {
+    font-size: 25px;
 
     @include breakpoint(sm) {
       font-size: 20px;
@@ -162,6 +178,10 @@
 
   @include breakpoint(sm) {
     text-align: start;
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
   }
 
   &__conditions {

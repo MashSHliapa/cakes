@@ -10,7 +10,6 @@ import './Fillings.scss';
 
 export function Fillings() {
   const { data: posts } = useSelector((state: RootState) => state.fillings);
-  console.log(posts);
 
   const fillingsPage = posts.slice(0, 10).map((item) => <FillingsCard key={item.id} post={item} />);
 

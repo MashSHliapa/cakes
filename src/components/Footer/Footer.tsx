@@ -1,4 +1,4 @@
-import { Contacts } from '../Contacts/Contacts';
+import { MyContacts } from '../MyContacts/MyContacts';
 import { Home } from '../Home/Home';
 import logo from '../images/footer_logo.svg';
 import './Footer.scss';
@@ -19,15 +19,9 @@ export function Footer() {
               </div>
             </div>
             <div className="footer__column">
-              <div className="footer__contacts contacts">
-                <h5 className="contacts__subtitle subtitle">Мои контакты:</h5>
-                <div className="contacts__data">
-                  <Contacts />
-                </div>
-                <h5 className="contacts__subtitle subtitle">Адрес самовывоза:</h5>
-                <div className="contacts__address">
-                  г. Минск <br />
-                  ул. Белецкого, 14/2
+              <div className="footer__my-contacts my-contacts">
+                <div className="my-contacts__my-contacts">
+                  <MyContacts />
                 </div>
               </div>
             </div>
