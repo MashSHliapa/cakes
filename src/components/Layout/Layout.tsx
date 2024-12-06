@@ -5,6 +5,7 @@ import { Footer } from '../Footer/Footer';
 import { Main } from '../Main/Main';
 import { Fillings } from '../Fillings/Fillings';
 import './Layout.scss';
+import { Contacts } from '../../pages/Contacts/Contacts';
 
 export function Layout() {
   return (
@@ -12,6 +13,7 @@ export function Layout() {
       <Header />
       <Main />
       <MainMenu />
+      <Contacts />
       <Outlet />
       <Fillings />
       <Footer />
