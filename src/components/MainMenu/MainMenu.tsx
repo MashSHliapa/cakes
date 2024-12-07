@@ -20,7 +20,7 @@ export function MainMenu() {
   }
 
   return (
-    <div className="main-menu">
+    <div className="main-menu" id="main-menu">
       <div className="main-menu__container _container">
         <div className="main-menu__body">
           <div className="main-menu__logo-title">

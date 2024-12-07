@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { AboutMe } from './pages/AboutMe/AboutMe';
+import { Contacts } from './pages/Contacts/Contacts';
 import { CakesForWedding } from './pages/CakesForWedding/CakesForWedding';
 import { CakesForChildren } from './pages/CakesForChildren/CakesForChildren';
 import { CakesForMen } from './pages/CakesForMen/CakesForMen';
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: '/about',
         element: <AboutMe />,
+      },
+      {
+        path: '/contacts',
+        element: <Contacts/>,
       },
       {
         path: '/cakes/for_wedding',

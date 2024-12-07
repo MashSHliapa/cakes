@@ -1,11 +1,10 @@
-import { Header } from '../Header/Header';
 import { Outlet } from 'react-router-dom';
-import { MainMenu } from '../MainMenu/MainMenu';
-import { Footer } from '../Footer/Footer';
+import { Header } from '../Header/Header';
 import { Main } from '../Main/Main';
+import { MainMenu } from '../MainMenu/MainMenu';
 import { Fillings } from '../Fillings/Fillings';
+import { Footer } from '../Footer/Footer';
 import './Layout.scss';
-import { Contacts } from '../../pages/Contacts/Contacts';
 
 export function Layout() {
   return (
@@ -13,7 +12,6 @@ export function Layout() {
       <Header />
       <Main />
       <MainMenu />
-      <Contacts />
       <Outlet />
       <Fillings />
       <Footer />

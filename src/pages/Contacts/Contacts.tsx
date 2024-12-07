@@ -18,11 +18,11 @@ export function Contacts() {
               <div className="contacts__title">
                 <Title>Контакты</Title>
               </div>
-              <div className="contacts__subtitle">
+              <h2 className="contacts__subtitle">
                 {' '}
                 Связаться
                 <br /> с Vanilla.Crazy
-              </div>
+              </h2>
               <div className="contacts__my-contacts">
                 <MyContacts />
               </div>
@@ -31,14 +31,14 @@ export function Contacts() {
               <div className="delivery-methods__logo-title">
                 <LogoTitle />
               </div>
-              <div className="delivery-methods__subtitle">Способы доставки:</div>
+              <h2 className="delivery-methods__subtitle">Способы доставки:</h2>
               <div className="delivery-methods__conditions ">
                 <a
                   href="https://taxi.yandex.by/ru_by/"
                   target="_blank"
                   className="delivery-methods__condition delivery-methods__condition_yandex"
                 >
-                  <div className="delivery-methods__text">Возможна доставка через Яндекс от двери до двери</div>
+                  <h3 className="delivery-methods__text">Возможна доставка через Яндекс от двери до двери</h3>
                   <div className="delivery-methods__icon">
                     <img src={arrowLeft} alt="arrow-left" />
                   </div>
@@ -54,15 +54,15 @@ export function Contacts() {
                   <div className="delivery-methods__icon">
                     <img src={arrowRight} alt="arrow-right" />
                   </div>
-                  <div className="delivery-methods__text">Вы также можете забрать свой заказ самостоятельно</div>
+                  <h3 className="delivery-methods__text">Вы также можете забрать свой заказ самостоятельно</h3>
                   <div className="delivery-methods__hover-img background _ibg">
                     <img src={address} alt="yandex" />
                   </div>
                 </a>
                 <div className="delivery-methods__condition delivery-methods__condition_wedding-order">
-                  <div className="delivery-methods__text">
+                  <h3 className="delivery-methods__text">
                     Свадебные заказы от 4 кг <br /> доставляются на место Вашего мероприятия
-                  </div>
+                  </h3>
                 </div>
               </div>
             </div>
