@@ -21,3 +21,11 @@ export interface IPropsCakesPage {
   row7?: JSX.Element[];
   row8?: JSX.Element[];
 }
+
+export interface UserModalDataType {
+  name: string;
+  email: string;
+  phone: string;
+  text: string;
+  agreement: boolean;
+}
