@@ -1,8 +1,22 @@
+import { useState } from 'react';
 import { Title } from '../../components/Title/Title';
 import mail from '../../components/icons/mail.png';
 import './Form.scss';
 
 export function Form() {
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setPreviewUrl(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="form">
       <div className="form__container _container">
@@ -15,7 +29,7 @@ export function Form() {
           </div>
           <h2 className="form__title">Заполните форму заявки и я свяжусь с Вами в ближайшее время</h2>
           <div className="form__form">
-            <form action="#" method="POST" id="form" autoComplete="off" className="form__body" onSubmit={() => ({})}>
+            <form id="form" autoComplete="off" className="form__body" onSubmit={() => ({})}>
               <div className="form__row">
                 <div className="form__column">
                   <div className="form__item">
@@ -29,14 +43,7 @@ export function Form() {
                     <label htmlFor="phone" className="form__label">
                       Номер телефона*
                     </label>
-                    <input
-                      type="phone"
-                      name="phone"
-                      id="phone"
-                      placeholder="+375 (__) ___ __ __"
-                      className="form__input"
-                      required
-                    />
+                    <input type="phone" name="phone" id="phone" className="form__input" required />
                     <div className="form__hint">После +375 необходимо указать 9 символов.</div>
                   </div>
 
@@ -44,35 +51,38 @@ export function Form() {
                     <label htmlFor="email" className="form__label">
                       Электронная почта*
                     </label>
-                    <input type="email" name="email" id="email" className="form__input" required />
+                    <input type="email" id="email" name="email" className="form__input" required />
                     <div className="form__hint">Пример формата эл.почты: 1264hfkm@gmail.com</div>
                   </div>
+
                   <div className="form__item">
                     <div className="form__label">Выберите желаемый способ доставки</div>
                     <div className="form__options options">
                       <div className="options__item">
-                        <input
-                          id="optionPickup"
-                          defaultChecked
-                          type="radio"
-                          name="option"
-                          value="pickup"
-                          className="options__input"
-                        />
                         <label htmlFor="optionPickup" className="options__label">
-                          <span>Самовывоз</span>
+                          <input
+                            id="optionPickup"
+                            defaultChecked
+                            type="radio"
+                            name="option"
+                            value="pickup"
+                            className="options__default-button"
+                          />
+                          <span className="options__new-button"></span>
+                          Самовывоз
                         </label>
                       </div>
                       <div className="options__item">
-                        <input
-                          id="optionDelivery"
-                          type="radio"
-                          name="option"
-                          value="delivery"
-                          className="options__input"
-                        />
                         <label htmlFor="optionDelivery" className="options__label">
-                          <span>Доставка</span>
+                          <input
+                            id="optionDelivery"
+                            type="radio"
+                            name="option"
+                            value="delivery"
+                            className="options__default-button"
+                          />
+                          <span className="options__new-button"></span>
+                          Доставка
                         </label>
                       </div>
                     </div>
@@ -98,15 +108,17 @@ export function Form() {
                           accept=".jpg, .jpeg, .png, .gif, webp"
                           type="file"
                           name="image"
-                          id="fileImage"
+                          id="image"
                           className="file__input"
+                          onChange={handleFileChange}
                         />
+                        {previewUrl && <img className="file__preview" src={previewUrl} alt="Preview" />}
                         <div className="form__hint">
                           Загружаемое изображение должно быть в формате jpg; png; gif. И весом не более 5 мб
                         </div>
                         <div className="file__button">Загрузить файл</div>
+                        <div className="file__preview" id="filePreview"></div>
                       </div>
-                      <div className="file__preview" id="filePreview"></div>
                     </div>
                   </div>
                 </div>
@@ -114,8 +126,15 @@ export function Form() {
 
               <div className="form__item">
                 <div className="agreement">
-                  <input type="checkbox" name="agreement" id="agreement" className="agreement__input" required />
                   <label htmlFor="agreement" className="agreement__label">
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      id="agreement"
+                      className="agreement__default-button"
+                      required
+                    />
+                    <span className="agreement__new-button"></span>
                     <span>
                       Я даю согласие на обработку персональных данных в соответствии с{' '}
                       <a href="#">политикой конфиденциальности</a>
@@ -124,7 +143,7 @@ export function Form() {
                 </div>
               </div>
               <div className="form__button-wrapper">
-                <button type="submit" className="form__button button">
+                <button type="submit" className="form__button">
                   Отправить
                 </button>
               </div>
