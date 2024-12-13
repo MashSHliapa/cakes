@@ -25,7 +25,9 @@ export interface IPropsCakesPage {
 export interface UserModalDataType {
   name: string;
   email: string;
-  phone: string;
+  phone: number;
+  option: string;
   text: string;
+  file: string;
   agreement: boolean;
 }

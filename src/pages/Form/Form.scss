@@ -510,3 +510,8 @@ textarea.form__input {
 .form * {
   outline: none;
 }
+
+.disabled {
+  background-color: rgb(203, 205, 206);
+  color: #484543;
+}
