@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { Title } from '../../components/Title/Title';
+import { Title } from '../Title/Title';
 import { UserModalDataType } from '../../types/interfaces';
 import mail from '../../components/icons/mail.png';
+import close from '../../components/icons/close.svg';
 import './Form.scss';
 
-export function Form() {
+export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: () => void }) {
   const nameValidation = Yup.string()
     .required('Обязательное для заполнения поле')
     .matches(/^(?:[^ ]|$)/, 'Первым символом не может быть пробел')
@@ -29,20 +30,47 @@ export function Form() {
     .matches(/^(?:[^ ]|$)/, 'Первым символом не может быть пробел')
     .max(250, 'Число символов должно быть не более 250');
 
+  // const fileValidation = Yup.mixed().test(
+  //   'file',
+  //   'Неверный формат файла. Пожалуйста загрузите JPEG, GIF или PNG формат.',
+  //   function checkFile(value) {
+  //     if (!value) return true;
+  //     const supportedFormats = ['image/jpeg', 'image/jpg', 'image/png'];
+  //     return supportedFormats.includes(value.type);
+  //   },
+  // );
+
+  const supportedFormats = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
+  const MAX_SOLUTION_FILE_SIZE_MB = 10;
+  const MAX_SOLUTION_FILE_SIZE_BYTES = MAX_SOLUTION_FILE_SIZE_MB * 1024 * 1024;
+
+  const fileValidation = Yup.mixed()
+    .required('Обязательное для заполнения поле')
+    .test('fileSize', function checkFileSize(value) {
+      if (!value) return true;
+      return value.size <= MAX_SOLUTION_FILE_SIZE_BYTES;
+    })
+    .test('fileFormat', function checkFile(value) {
+      if (!value) return true;
+      return supportedFormats.includes(value.type);
+    });
+
   const agreementValidation = Yup.boolean().oneOf([true], 'Обязательное для заполнения поле');
 
   const scheme = Yup.object().shape({
     name: nameValidation,
     phone: phoneValidation,
     email: emailValidation,
+    option: Yup.string(),
     text: messageValidation,
+    // file: fileValidation,
     agreement: agreementValidation,
   });
 
   const {
-    // handleSubmit,
+    handleSubmit,
     register,
-    // reset,
+    reset,
     formState: { errors, isValid, isDirty },
   } = useForm<UserModalDataType>({
     mode: 'onChange',
@@ -62,21 +90,58 @@ export function Form() {
     }
   };
 
+  const onSubmit = async (data: UserModalDataType) => {
+    try {
+      const formData = new FormData(document.getElementById('form') as HTMLFormElement);
+
+      formData.append('file', previewUrl as string);
+      formData.forEach((value, key) => {
+        console.log(key, value);
+      });
+
+      const response = await fetch('http://localhost:8099/uploads', {
+        method: 'POST',
+        // headers: {
+        //   'Content-Type': 'application/json',
+        //   Accept: 'application/json',
+        // },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          option: data.option,
+          message: data.text,
+          file: formData.get('file'),
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log(result);
+        alert('форма отправлена!!!');
+        reset();
+        onClickBtnCloseOrderForm();
+      } else {
+        console.error('Ошибка!');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const [phone, setPhone] = useState('+375');
 
   const handleInputPhoneFrom5 = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
     const cursorPosition = event.target.selectionStart;
 
-    // Если поле пустое, устанавливаем '+375'
     if (inputValue.length === 0 || inputValue.length <= 4) {
       setPhone('+375');
-    } else if (cursorPosition as number <= 4) {
+    } else if ((cursorPosition as number) <= 4) {
       event.preventDefault();
     } else {
       const newValue = inputValue.slice(0, 4) + inputValue.slice(4).replace(/[^0-9]/g, '');
       setPhone(newValue);
-      console.log(newValue);
     }
   };
 
@@ -85,12 +150,24 @@ export function Form() {
     register('phone').onChange(event);
   };
 
+  const filePickerRef = useRef<HTMLInputElement>(null);
+  const handleFilePick = () => {
+    filePickerRef.current?.click();
+  };
+
+  const handleCloseForm = () => {
+    onClickBtnCloseOrderForm();
+  };
+
   return (
     <div className="form">
       <div className="form__container _container">
         <div className="form__box">
           <div className="form__image-mail">
             <img src={mail} alt="mail" />
+          </div>
+          <div className="form__close-form" onClick={handleCloseForm}>
+            <img src={close} alt="close" />
           </div>
           <div className="form__main-title">
             <Title>Оставьте заявку</Title>
@@ -103,7 +180,7 @@ export function Form() {
               id="form"
               // autoComplete="off"
               className="form__body"
-              onSubmit={() => ({})}
+              onSubmit={handleSubmit(onSubmit)}
             >
               <div className="form__row">
                 <div className="form__column">
@@ -111,7 +188,13 @@ export function Form() {
                     <label htmlFor="name" className="form__label">
                       Ваше имя*
                     </label>
-                    <input type="text" id="name" className="form__input" required {...register('name')} />
+                    <input
+                      type="text"
+                      id="name"
+                      className={errors.name ? 'form__input form__input_error' : 'form__input'}
+                      required
+                      {...register('name')}
+                    />
                     {errors.name && <div className="form__error">{errors.name.message}</div>}
                   </div>
 
@@ -122,7 +205,7 @@ export function Form() {
                     <input
                       type="phone"
                       id="phone"
-                      className="form__input"
+                      className={errors.phone ? 'form__input form__input_error' : 'form__input'}
                       required
                       value={phone}
                       {...register('phone')}
@@ -135,7 +218,13 @@ export function Form() {
                     <label htmlFor="email" className="form__label">
                       Электронная почта*
                     </label>
-                    <input type="email" id="email" className="form__input" required {...register('email')} />
+                    <input
+                      type="email"
+                      id="email"
+                      className={errors.email ? 'form__input form__input_error' : 'form__input'}
+                      required
+                      {...register('email')}
+                    />
                     {errors.email && <div className="form__error">{errors.email.message}</div>}
                     <div className="form__hint">Пример формата эл.почты: 1264hfkm@gmail.com</div>
                   </div>
@@ -178,7 +267,12 @@ export function Form() {
                     <label htmlFor="text" className="form__label">
                       Сообщение*
                     </label>
-                    <textarea id="text" className="form__input" {...register('text')} required></textarea>
+                    <textarea
+                      id="text"
+                      className={errors.text ? 'form__input form__input_error' : 'form__input'}
+                      {...register('text')}
+                      required
+                    ></textarea>
                     {errors.text && <div className="form__error">{errors.text.message}</div>}
                     <div className="form__hint">
                       В данном поле необходимо указать вид желаемого угощения, кому, в честь какого праздника. А также
@@ -190,22 +284,24 @@ export function Form() {
                     <div className="form__label">Прикрепите изображения желаемого торта</div>
                     <div className="form__file file">
                       <div className="file__item">
-                        <input
-                          accept=".jpg, .jpeg, .png, .gif, webp"
-                          type="file"
-                          id="image"
-                          className="file__input"
-                          onChange={handleFileChange}
-                        />
-                        {errors.file && <div className="form__error">{errors.file.message}</div>}
-                        {previewUrl && <img className="file__preview" src={previewUrl} alt="Preview" />}
-
-                        <div className="form__hint">
+                        <div className="form__hint hint">
                           Загружаемое изображение должно быть в формате jpg; png; gif. И весом не более 5 мб
                         </div>
-                        <div className="file__button">Загрузить файл</div>
-                        <div className="file__preview" id="filePreview"></div>
+                        <div className="file__button" onClick={handleFilePick}>
+                          Загрузить файл
+                        </div>
+                        <input
+                          accept="image/*, .jpg, .jpeg, .png, .gif, webp"
+                          type="file"
+                          id="file"
+                          name="file"
+                          className="file__input"
+                          onChange={handleFileChange}
+                          ref={filePickerRef}
+                        />
+                        {errors.file && <div className="form__error">{errors.file.message}</div>}
                       </div>
+                      {previewUrl && <img className="file__preview" src={previewUrl} alt="Preview" />}
                     </div>
                   </div>
                 </div>
@@ -244,6 +340,12 @@ export function Form() {
                 </div>
               )}
             </form>
+            <h6 className="form__attention">
+              <span>ВНИМАНИЕ!</span>
+              Отправленная заявка не является оформленным заказом!
+              <br />
+              Для подтверждения заказа я свяжусь с Вами для уточнения деталей.{' '}
+            </h6>
           </div>
         </div>
       </div>

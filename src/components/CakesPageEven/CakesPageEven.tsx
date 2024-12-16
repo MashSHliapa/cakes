@@ -1,14 +1,9 @@
-import { NavLink } from 'react-router-dom';
-import { scrollToPage } from '../../helpers/scrollToPage';
 import { LogoTitle } from '../LogoTitle/LogoTitle';
+import { OrderButton } from '../OrderButton/OrderButton';
 import { GoToTop } from '../GoToTop/GoToTop';
 import { IPropsCakesPage } from '../../types/interfaces';
 
 export function CakesPageEven(props: IPropsCakesPage) {
-  function scrollToContacts() {
-    setTimeout(() => scrollToPage('contacts'), 100);
-  }
-
   return (
     <div className="cakes">
       <div className="cakes__container _container">
@@ -25,9 +20,7 @@ export function CakesPageEven(props: IPropsCakesPage) {
                 <h3 className="cakes__subtitle">{props.subtitle}</h3>
                 <h3 className="cakes__text">{props.text}</h3>
                 <div className="cakes__button-wrapper">
-                  <NavLink to="/contacts" className="cakes__button button" onClick={scrollToContacts}>
-                    Заказать
-                  </NavLink>
+                  <OrderButton />
                 </div>
               </div>
             </div>

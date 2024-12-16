@@ -9,7 +9,7 @@ export function GoToTop() {
 
   document.addEventListener('scroll', function () {
     const pageCakes = document.querySelector('.cakes');
-    const button = document.querySelector('.cakes__button');
+    const button = document.querySelector('.cakes__button-wrapper');
     const upperLimit = (button?.getBoundingClientRect().top ?? 0) + window.scrollY + 50;
     const lowerLimit = (pageCakes?.getBoundingClientRect().bottom ?? 0) + window.scrollY - 400;
 

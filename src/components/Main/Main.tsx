@@ -1,18 +1,10 @@
-import { NavLink } from 'react-router-dom';
-import { scrollToPage } from '../../helpers/scrollToPage';
+import { OrderButton } from '../OrderButton/OrderButton';
 import myPhoto from '../images/my_photo.png';
 import mainPhoto from '../images/main_photo.png';
 import mainLogo from '../images/main_logo.svg';
 import './Main.scss';
 
 export function Main() {
-  function scrollToContacts() {
-    console.log('scroll');
-    setTimeout(() => {
-      scrollToPage('contacts');
-    }, 200);
-  }
-
   return (
     <main className="main">
       <div className="main__container _container">
@@ -24,9 +16,7 @@ export function Main() {
               <h3 className="main__slogan">С моими десертами остаются навсегда!</h3>
             </div>
             <div className="main__button-wrapper">
-              <NavLink to="/contacts" className="main__button button" onClick={scrollToContacts}>
-                Заказать
-              </NavLink>
+              <OrderButton />
             </div>
           </div>
           <div className="main__images">
