@@ -10,7 +10,7 @@ export function OrderButton() {
 
   return (
     <div className="order-button">
-      <div className="main__button button" onClick={onClickBtnOrderForm}>
+      <div className="main__button button button-main" onClick={onClickBtnOrderForm}>
         Заказать
       </div>
       {isOrderFormOpen && <Form onClickBtnCloseOrderForm={onClickBtnOrderForm} />}

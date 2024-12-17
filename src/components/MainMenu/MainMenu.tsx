@@ -16,7 +16,7 @@ import './MainMenu.scss';
 
 export function MainMenu() {
   function scrollToCakes() {
-    setTimeout(() =>scrollToPage('cakes'), 200);
+    setTimeout(() => scrollToPage('cakes'), 200);
   }
 
   return (
@@ -76,7 +76,7 @@ export function MainMenu() {
               <img src={arrow} alt="arrow" />
             </div>
             <div className="main-menu__button-wrapper">
-              <a href="#fillings" className="main-menu__button button">
+              <a href="#fillings" className="main-menu__button button button-main">
                 Начинки
               </a>
             </div>

@@ -22,12 +22,12 @@ export interface IPropsCakesPage {
   row8?: JSX.Element[];
 }
 
-export interface UserModalDataType {
+export interface FormDataType {
   name: string;
   email: string;
-  phone: number;
-  option: string;
+  phone: string;
+  option?: string;
   text: string;
-  file: string;
-  agreement: boolean;
+  file?: string;
+  agreement?: boolean;
 }

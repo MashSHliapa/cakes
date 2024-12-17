@@ -129,12 +129,18 @@ body {
   background-color: #5475a4;
   color: #f0eada;
   border-radius: 50px;
-  line-height: 1.14;
-  padding: 20px 57px;
+  line-height: 1.21;
   cursor: pointer;
 
   @include breakpoint(sm) {
     font-size: 15px;
+  }
+}
+
+.button-main {
+  padding: 20px 57px;
+
+  @include breakpoint(sm) {
     padding: 15px 41px;
   }
 }
