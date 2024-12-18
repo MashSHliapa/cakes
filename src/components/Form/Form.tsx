@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Title } from '../Title/Title';
 import { schema } from './schemaValidaion';
+import { Loading } from '../Loading/Loading';
 import { MessageSuccess } from '../MessageSuccess/MessageSuccess';
 import { MessageError } from '../MessageError/MessageError';
 import { FormDataType } from '../../types/interfaces';
@@ -15,6 +16,7 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const {
     handleSubmit,
@@ -28,6 +30,7 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
+    console.log(file);
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -39,6 +42,7 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
 
   const onSubmit = async (data: FormDataType) => {
     try {
+      setLoading(true);
       const formData = new FormData(document.getElementById('form') as HTMLFormElement);
 
       formData.append('file', previewUrl as string);
@@ -72,6 +76,8 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -106,7 +112,9 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
   return (
     <div>
       <div className="form">
-        {success ? (
+        {loading ? (
+          <Loading />
+        ) : success ? (
           <MessageSuccess closeForm={onClickBtnCloseOrderForm} />
         ) : error ? (
           <MessageError closeForm={onClickBtnCloseOrderForm} />

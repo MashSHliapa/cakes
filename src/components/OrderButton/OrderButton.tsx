@@ -8,6 +8,12 @@ export function OrderButton() {
     setIsOrderFormOpen((prevState) => !prevState);
   };
 
+  if (isOrderFormOpen) {
+    document.documentElement.style.overflow = 'hidden';
+  } else {
+    document.documentElement.style.overflow = '';
+  }
+
   return (
     <div className="order-button">
       <div className="main__button button button-main" onClick={onClickBtnOrderForm}>

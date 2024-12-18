@@ -7,7 +7,7 @@ export function MenuBurger() {
 
   function handleClickToggleNavbar() {
     setOpenNavbar(!openNavbar);
-    document.body.style.overflow = openNavbar ? 'auto' : 'hidden';
+    document.body.style.overflow = openNavbar ? '' : 'hidden';
 
     const burgerIcon = document.querySelector('.burger__icon');
     burgerIcon?.classList.toggle('_active');
@@ -20,7 +20,7 @@ export function MenuBurger() {
     const handleClickCloseNavbar = (event: MouseEvent | React.MouseEvent) => {
       if (!(event.target as HTMLElement).closest('.burger__icon')) {
         setOpenNavbar(false);
-        document.body.style.overflow = !openNavbar ? 'auto' : 'hidden';
+        document.body.style.overflow = !openNavbar ? '' : 'hidden';
         const burgerIcon = document.querySelector('.burger__icon');
         burgerIcon?.classList.remove('_active');
       }
