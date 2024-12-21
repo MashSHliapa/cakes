@@ -14,6 +14,7 @@ import './Form.scss';
 export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: () => void }) {
   const [phone, setPhone] = useState('+375');
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -32,6 +33,7 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
     const file = event.target.files?.[0];
     console.log(file);
     if (file) {
+      setSelectedFile(file);
       const reader = new FileReader();
       reader.onload = () => {
         setPreviewUrl(reader.result as string);
@@ -43,27 +45,26 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
   const onSubmit = async (data: FormDataType) => {
     try {
       setLoading(true);
-      const formData = new FormData(document.getElementById('form') as HTMLFormElement);
+      const formData = new FormData();
 
-      formData.append('file', previewUrl as string);
-      formData.forEach((value, key) => {
-        console.log(key, value);
-      });
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('phone', data.phone);
+      formData.append('text', data.text);
+      formData.append('option', data.option || '');
+      formData.append('agreement', data.agreement ? 'true' : 'false');
 
-      const response = await fetch('http://localhost:8099/uploads', {
+      if (selectedFile) {
+        formData.append('file', selectedFile);
+      }
+
+      // formData.forEach((value, key) => {
+      //   console.log(key, value);
+      // });
+
+      const response = await fetch('http://localhost:3011/send-email', {
         method: 'POST',
-        // headers: {
-        //   'Content-Type': 'application/json',
-        //   Accept: 'application/json',
-        // },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          option: data.option as string,
-          text: data.text,
-          file: formData.get('file'),
-        }),
+        body: formData,
       });
 
       if (response.ok) {
@@ -239,7 +240,7 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
                       </div>
 
                       <div className="form__item">
-                        <div className="form__label">Прикрепите изображения желаемого торта</div>
+                        <div className="form__label">Прикрепите изображение желаемого торта</div>
                         <div className="form__file file">
                           <div className="file__item">
                             <div className="form__hint hint">
@@ -252,8 +253,8 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
                               accept="image/*, .jpg, .jpeg, .png, .gif, webp"
                               type="file"
                               id="file"
-                              name="file"
                               className="file__input"
+                              {...register('file')}
                               onChange={handleFileChange}
                               ref={filePickerRef}
                             />

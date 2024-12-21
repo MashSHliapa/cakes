@@ -809,6 +809,24 @@
       "option": "pickup",
       "text": "ыыы",
       "file": {}
+    },
+    {
+      "id": "f1aa",
+      "name": "маша",
+      "email": "bfhn@yandex.ru",
+      "phone": "+375257777785",
+      "option": "pickup",
+      "text": "dfgbnkbnlm,.;,",
+      "file": {}
+    },
+    {
+      "id": "d8f1",
+      "name": "Maria",
+      "email": "shliapa.maria@mail.ru",
+      "phone": "+375253333333",
+      "option": "delivery",
+      "text": "vvv",
+      "file": {}
     }
   ]
 }
