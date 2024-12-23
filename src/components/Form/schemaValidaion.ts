@@ -21,29 +21,26 @@ const messageValidation = Yup.string()
   .matches(/^(?:[^ ]|$)/, 'Первым символом не может быть пробел')
   .max(250, 'Число символов должно быть не более 250');
 
-// const fileValidation = Yup.mixed().test(
-//   'file',
-//   'Неверный формат файла. Пожалуйста загрузите JPEG, GIF или PNG формат.',
-//   function checkFile(value) {
-//     if (!value) return true;
-//     const supportedFormats = ['image/jpeg', 'image/jpg', 'image/png'];
-//     return supportedFormats.includes(value.type);
-//   },
-// );
-
 const supportedFormats = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
-const MAX_SOLUTION_FILE_SIZE_MB = 10;
-const MAX_SOLUTION_FILE_SIZE_BYTES = MAX_SOLUTION_FILE_SIZE_MB * 1024 * 1024;
+export const MAX_SOLUTION_FILE_SIZE_MB = 5;
+export const MAX_SOLUTION_FILE_SIZE_BYTES = MAX_SOLUTION_FILE_SIZE_MB * 1024 * 1024;
 
-const fileValidation = Yup.mixed()
-  .required('Обязательное для заполнения поле')
-  .test('fileSize', function checkFileSize(value) {
+const fileValidation = Yup.mixed<File>()
+  .test(
+    'fileFormat',
+    'Неверный формат файла. Пожалуйста загрузите JPEG, GIF или PNG формат',
+    function checkFile(value) {
+      if (!value) return true;
+      const file = value as File;
+      const isValidFormat = supportedFormats.includes(file.type);
+      return isValidFormat;
+    },
+  )
+  .test('fileSize', 'Размер файла слишком большой', function (value) {
     if (!value) return true;
-    return value.size <= MAX_SOLUTION_FILE_SIZE_BYTES;
-  })
-  .test('fileFormat', function checkFile(value) {
-    if (!value) return true;
-    return supportedFormats.includes(value.type);
+    const file = value as File;
+    const isValidSize = file.size <= MAX_SOLUTION_FILE_SIZE_BYTES;
+    return isValidSize;
   });
 
 const agreementValidation = Yup.boolean().oneOf([true], 'Обязательное для заполнения поле');
@@ -54,6 +51,6 @@ export const schema = Yup.object().shape({
   email: emailValidation,
   option: Yup.string(),
   text: messageValidation,
-  // file: fileValidation,
+  file: fileValidation,
   agreement: agreementValidation,
 });

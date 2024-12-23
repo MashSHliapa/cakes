@@ -23,22 +23,25 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
     handleSubmit,
     register,
     reset,
+    setValue,
+    trigger,
     formState: { errors, isValid, isDirty },
   } = useForm<FormDataType>({
     mode: 'onChange',
     resolver: yupResolver(schema),
   });
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    console.log(file);
     if (file) {
+      setValue('file', file);
       setSelectedFile(file);
       const reader = new FileReader();
       reader.onload = () => {
         setPreviewUrl(reader.result as string);
       };
       reader.readAsDataURL(file);
+      await trigger('file');
     }
   };
 

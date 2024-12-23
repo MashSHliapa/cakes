@@ -28,6 +28,6 @@ export interface FormDataType {
   phone: string;
   option?: string;
   text: string;
-  file?: string;
+  file?: File;
   agreement?: boolean;
 }
