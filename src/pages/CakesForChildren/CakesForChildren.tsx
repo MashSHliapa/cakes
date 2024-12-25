@@ -1,13 +1,36 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
+import { fetchCakes } from '../../redux/cakesSlice';
+import { RootState } from '../../redux/store';
 import { cakeDistribution } from '../../helpers/cakeDistribution';
 import { filterCakesByCategory } from '../../helpers/filterCakesByCategory';
 import { CakesPageEven } from '../../components/CakesPageEven/CakesPageEven';
-import { RootState } from '../../redux/store';
+import { Loading } from '../../components/Loading/Loading';
+import { DataInitialState } from '../../types/interfaces';
 
 export function CakesForChildren() {
-  const cakes = useSelector((state: RootState) => state.cakes.data);
+  const { data: posts, loading, error } = useSelector((state: RootState) => state.cakes);
 
-  const filterCakes = filterCakesByCategory('for_children', cakes);
+  const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
+
+  useEffect(() => {
+    dispatch(fetchCakes());
+  }, [dispatch]);
+
+  if (loading) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div className="text-danger">{error}</div>;
+  }
+
+  const filterCakes = filterCakesByCategory('for_children', posts);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);
   const cakesRow2 = cakeDistribution(filterCakes, 6, 7);

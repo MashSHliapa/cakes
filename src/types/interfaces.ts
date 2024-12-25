@@ -31,3 +31,9 @@ export interface FormDataType {
   file?: File;
   agreement?: boolean;
 }
+
+export interface DataInitialState {
+  loading: boolean;
+  error: null | string;
+  data: { id: number; image: string; category: string }[];
+}
