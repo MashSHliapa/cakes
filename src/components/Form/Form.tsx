@@ -237,8 +237,8 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
                         ></textarea>
                         {errors.text && <div className="form__error">{errors.text.message}</div>}
                         <div className="form__hint">
-                          В данном поле необходимо указать вид желаемого угощения, кому, в честь какого праздника. А
-                          также пожелания по декору, весу торта и начинке.
+                          В данном поле необходимо указать дату праздника, вид желаемого угощения, кому предназначено. А
+                          также пожелания по декору, весу и начинке.
                         </div>
                       </div>
 

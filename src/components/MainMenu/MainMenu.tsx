@@ -42,7 +42,7 @@ export function MainMenu() {
             </NavLink>
             <NavLink to="/cakes/two_tier" className="main-menu__item" onClick={scrollToCakes}>
               <img src={twoTier} alt="two-tier" />
-              <div className="main-menu__item-text">Двухярусные</div>
+              <div className="main-menu__item-text">Многоярусные</div>
             </NavLink>
             <NavLink to="/cakes/open_cakes" className="main-menu__item" onClick={scrollToCakes}>
               <img src={openHoney} alt="open_honey" />

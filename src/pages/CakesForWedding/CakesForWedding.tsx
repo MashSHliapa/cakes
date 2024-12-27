@@ -1,11 +1,36 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
+import { fetchCakes } from '../../redux/cakesSlice';
+import { RootState } from '../../redux/store';
 import { cakeDistribution } from '../../helpers/cakeDistribution';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { filterCakesByCategory } from '../../helpers/filterCakesByCategory';
 import { CakesPageOdd } from '../../components/CakesPageOdd/CakesPageOdd';
-import { RootState } from '../../redux/store';
+import { Loading } from '../../components/Loading/Loading';
+import { DataInitialState } from '../../types/interfaces';
 
 export function CakesForWedding() {
-  const cakes = useSelector((state: RootState) => state.cakes.data);
+  const { data: cakes, loading, error } = useSelector((state: RootState) => state.cakes);
+
+  const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
+
+  useEffect(() => {
+    scrollToPage('cakes');
+    dispatch(fetchCakes());
+  }, [dispatch]);
+
+  if (loading) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div className="text-danger">{error}</div>;
+  }
 
   const filterCakes = filterCakesByCategory('for_wedding', cakes);
 
@@ -29,4 +54,3 @@ export function CakesForWedding() {
     />
   );
 }
-

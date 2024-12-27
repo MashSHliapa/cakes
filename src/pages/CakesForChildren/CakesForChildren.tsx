@@ -4,17 +4,19 @@ import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 import { fetchCakes } from '../../redux/cakesSlice';
 import { RootState } from '../../redux/store';
 import { cakeDistribution } from '../../helpers/cakeDistribution';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { filterCakesByCategory } from '../../helpers/filterCakesByCategory';
 import { CakesPageEven } from '../../components/CakesPageEven/CakesPageEven';
 import { Loading } from '../../components/Loading/Loading';
 import { DataInitialState } from '../../types/interfaces';
 
 export function CakesForChildren() {
-  const { data: posts, loading, error } = useSelector((state: RootState) => state.cakes);
+  const { data: cakes, loading, error } = useSelector((state: RootState) => state.cakes);
 
   const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
 
   useEffect(() => {
+    scrollToPage('cakes');
     dispatch(fetchCakes());
   }, [dispatch]);
 
@@ -30,7 +32,7 @@ export function CakesForChildren() {
     return <div className="text-danger">{error}</div>;
   }
 
-  const filterCakes = filterCakesByCategory('for_children', posts);
+  const filterCakes = filterCakesByCategory('for_children', cakes);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);
   const cakesRow2 = cakeDistribution(filterCakes, 6, 7);

@@ -1,11 +1,36 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
+import { fetchCakes } from '../../redux/cakesSlice';
+import { RootState } from '../../redux/store';
 import { cakeDistribution } from '../../helpers/cakeDistribution';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { filterCakesByCategory } from '../../helpers/filterCakesByCategory';
 import { CakesPageEven } from '../../components/CakesPageEven/CakesPageEven';
-import { RootState } from '../../redux/store';
+import { Loading } from '../../components/Loading/Loading';
+import { DataInitialState } from '../../types/interfaces';
 
 export function CakesTwoTier() {
-  const cakes = useSelector((state: RootState) => state.cakes.data);
+  const { data: cakes, loading, error } = useSelector((state: RootState) => state.cakes);
+
+  const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
+
+  useEffect(() => {
+    scrollToPage('cakes');
+    dispatch(fetchCakes());
+  }, [dispatch]);
+
+  if (loading) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div className="text-danger">{error}</div>;
+  }
 
   const filterCakes = filterCakesByCategory('two_tier', cakes);
 
@@ -15,9 +40,9 @@ export function CakesTwoTier() {
 
   return (
     <CakesPageEven
-      title="Двухъярусные торты"
-      subtitle="Двухъярусное наслождение!"
-      text="Если на Вашем правднике большое количество гостей, то двухъярусные торты - это идеальное решение! В добавок, можно сделать интресное расположения ярусов отностительно друг друга, подобрать незабывваемый дизайн и даже сделать разые начинки для каждого яруса!!"
+      title="Многоярусные торты"
+      subtitle="Многоярусное наслаждение!"
+      text="Если на Вашем правднике большое количество гостей, то двухъярусные торты - это идеальное решение! В добавок, можно сделать интресное расположения ярусов отностительно друг друга, подобрать незабываемый дизайн и даже сделать разые начинки для каждого яруса!!"
       row1={cakesRow1}
       row2={cakesRow2}
       row3={cakesRow3}
