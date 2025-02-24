@@ -16,9 +16,15 @@ export function OpenCakes() {
   const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
 
   useEffect(() => {
-    scrollToPage('cakes');
     dispatch(fetchCakes());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (error) {
+      scrollToPage('text-danger');
+      console.log(error);
+    }
+  }, [error]);
 
   if (loading) {
     return (
@@ -35,9 +41,7 @@ export function OpenCakes() {
   const filterCakes = filterCakesByCategory('open_cakes', cakes);
 
   const openCakesRow1 = cakeDistribution(filterCakes, 0, 3);
-
   const openCakesRow2 = cakeDistribution(filterCakes, 6, 7);
-
   const openCakesRow3 = cakeDistribution(filterCakes, 3, 6);
 
   return (

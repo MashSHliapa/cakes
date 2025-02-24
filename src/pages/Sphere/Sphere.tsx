@@ -16,9 +16,15 @@ export function Sphere() {
   const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
 
   useEffect(() => {
-    scrollToPage('cakes');
     dispatch(fetchCakes());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (error) {
+      scrollToPage('text-danger');
+      console.log(error);
+    }
+  }, [error]);
 
   if (loading) {
     return (

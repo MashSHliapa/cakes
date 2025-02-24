@@ -76,7 +76,8 @@
 
     @include breakpoint(sm) {
       border-radius: 0 28px 0 28px;
-      width: 126px;
+      width: 130px;
+      // width: 126px;
       padding: 17px 5px;
     }
   }
@@ -104,12 +105,12 @@
     }
 
     @include breakpoint(md) {
-      font-size: 15px;
+      font-size: 18px;
       margin-top: 13px;
     }
 
     @include breakpoint(sm) {
-      font-size: 11px;
+      font-size: 16px;
       margin-top: 10px;
     }
   }

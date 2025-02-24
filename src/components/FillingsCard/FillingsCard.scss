@@ -24,9 +24,9 @@
 
     @include breakpoint(md) {
       gap: 6px;
-      width: 195px;
-      height: 302px;
-      padding: 9px 10px;
+      width: 205px;
+      height: 360px;
+      padding: 10px 7px;
     }
   }
 
@@ -49,14 +49,7 @@
   }
 
   &__weight {
-    font-size: 13px;
-
-    @include breakpoint(lg) {
-      font-size: 12px;
-    }
-    @include breakpoint(md) {
-      font-size: 10px;
-    }
+    font-size: 14px;
   }
 
   &__name {
@@ -72,7 +65,6 @@
     }
 
     @include breakpoint(md) {
-      min-height: 33px;
       margin: 5px 0;
     }
   }
@@ -87,7 +79,7 @@
     }
 
     @include breakpoint(md) {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 
@@ -101,7 +93,7 @@
     }
 
     @include breakpoint(md) {
-      font-size: 10px;
+      font-size: 14px;
     }
   }
 
@@ -125,7 +117,7 @@
     }
 
     @include breakpoint(md) {
-      font-size: 10px;
+      font-size: 13px;
     }
   }
 }

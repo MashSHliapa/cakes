@@ -16,9 +16,15 @@ export function CakesForLadies() {
   const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
 
   useEffect(() => {
-    scrollToPage('cakes');
     dispatch(fetchCakes());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (error) {
+      scrollToPage('text-danger');
+      console.log(error);
+    }
+  }, [error]);
 
   if (loading) {
     return (
@@ -35,11 +41,8 @@ export function CakesForLadies() {
   const filterCakes = filterCakesByCategory('for_women', cakes);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);
-
   const cakesRow2 = cakeDistribution(filterCakes, 6, 7);
-
   const cakesRow3 = cakeDistribution(filterCakes, 3, 6);
-
   const cakesRow4 = cakeDistribution(filterCakes, 7, 10);
   const cakesRow5 = cakeDistribution(filterCakes, 10, 13);
   const cakesRow6 = cakeDistribution(filterCakes, 13, 16);

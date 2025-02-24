@@ -1,1 +1,1 @@
-export const cakesEndpoint = '/uploads';
+export const cakesEndpoint = '/cakes';
