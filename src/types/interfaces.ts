@@ -37,3 +37,11 @@ export interface DataInitialState {
   error: null | string;
   data: { id: number; image: string; category: string }[];
 }
+
+export interface FillingData {
+  id: number;
+  title: string;
+  text: string;
+  weight: number;
+  image: string;
+}

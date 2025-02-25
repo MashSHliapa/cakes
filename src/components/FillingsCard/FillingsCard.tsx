@@ -9,7 +9,7 @@ export function FillingsCard(props: { post: PostData }) {
           <img src={props.post.image} alt="image" />
         </div>
         <div className="fillings-card__info">
-          <div className="fillings-card__weight">Минимальный вес: {props.post.weight}</div>
+          <div className="fillings-card__weight">Минимальный вес: {props.post.weight} кг</div>
           <div className="fillings-card__name">
             <div className="fillings-card__title">
               {props.post.title} <span>{props.post.subtitle}</span>

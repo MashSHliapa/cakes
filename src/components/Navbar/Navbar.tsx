@@ -11,6 +11,16 @@ export function Navbar() {
     setTimeout(() => scrollToPage('contacts'), 100);
   }
 
+  const handleOpenLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const fillingsElement = document.getElementById('fillings');
+    const errorElement = document.getElementById('text-danger');
+
+    if (!fillingsElement && errorElement) {
+      event.preventDefault();
+      errorElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="navbar">
       <nav className="navbar__body">
@@ -21,7 +31,7 @@ export function Navbar() {
             </a>
           </li>
           <li className="navbar__item">
-            <a className="navbar__link" href="#fillings">
+            <a className="navbar__link" href="#fillings" onClick={handleOpenLink}>
               Начинки
             </a>
           </li>

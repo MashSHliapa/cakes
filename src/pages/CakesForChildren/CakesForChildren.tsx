@@ -12,7 +12,6 @@ import { DataInitialState } from '../../types/interfaces';
 
 export function CakesForChildren() {
   const { data: cakes, loading, error } = useSelector((state: RootState) => state.cakes);
-  console.log(cakes);
 
   const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
 
@@ -23,7 +22,6 @@ export function CakesForChildren() {
   useEffect(() => {
     if (error) {
       scrollToPage('text-danger');
-      console.log(error);
     }
   }, [error]);
 

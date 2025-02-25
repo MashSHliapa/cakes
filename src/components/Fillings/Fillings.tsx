@@ -1,17 +1,44 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 import Slider from 'react-slick';
 import { sliderSettings } from './sliderSettings';
+import { fetchFillings } from '../../redux/fillingsSlice';
+import { RootState } from '../../redux/store';
 import { FillingsCard } from '../FillingsCard/FillingsCard';
 import { Title } from '../Title/Title';
 import { Home } from '../Home/Home';
-import { RootState } from '../../redux/store';
+import { Loading } from '../Loading/Loading';
+import { DataInitialState } from '../../types/interfaces';
 import image from '../images/fillings/fillings_flower.png';
 import './Fillings.scss';
 
 export function Fillings() {
-  const { data: posts } = useSelector((state: RootState) => state.fillings);
+  const { data: posts, loading, error } = useSelector((state: RootState) => state.fillings);
 
-  const fillingsPage = posts.slice(0, 10).map((item) => <FillingsCard key={item.id} post={item} />);
+  const dispatch = useDispatch<ThunkDispatch<DataInitialState, null, AnyAction>>();
+
+  useEffect(() => {
+    dispatch(fetchFillings());
+  }, [dispatch]);
+
+  const fillingsPage = posts.map((item) => <FillingsCard key={item.id} post={item} />);
+
+  if (loading) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-danger" id="text-danger">
+        {error}
+      </div>
+    );
+  }
 
   return (
     <div className="fillings" id="fillings">
