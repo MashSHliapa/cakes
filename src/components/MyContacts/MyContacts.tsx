@@ -1,8 +1,35 @@
+import { useEffect } from 'react';
 import instagram from '../icons/instagram.svg';
 import telegram from '../icons/telegram.svg';
 import './MyContacts.scss';
 
 export function MyContacts() {
+  useEffect(() => {
+    const handleHighlightText = (event: MouseEvent) => {
+      const emailElements = document.querySelectorAll('.my-contacts__email');
+      let isTextHighlighted = false;
+
+      emailElements.forEach((element) => {
+        if (element === event.target) {
+          isTextHighlighted = true;
+        }
+      });
+
+      if (!isTextHighlighted) {
+        const selection = window.getSelection();
+        if (selection) {
+          selection.removeAllRanges();
+        }
+      }
+    };
+
+    document.addEventListener('click', handleHighlightText);
+
+    return () => {
+      document.removeEventListener('click', handleHighlightText);
+    };
+  }, []);
+
   return (
     <div className="my-contacts">
       <div className="my-contacts__body">
