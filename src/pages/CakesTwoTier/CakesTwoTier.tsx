@@ -34,10 +34,6 @@ export function CakesTwoTier() {
     );
   }
 
-  if (error) {
-    return <div className="text-danger">{error}</div>;
-  }
-
   const filterCakes = filterCakesByCategory('two_tier', cakes);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);

@@ -15,7 +15,13 @@ export function MyContacts() {
         }
       });
 
-      if (!isTextHighlighted) {
+      // Поля формы
+      const isInput =
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement ||
+        (event.target as HTMLElement).closest('input, textarea') !== null;
+
+      if (!isTextHighlighted && !isInput) {
         const selection = window.getSelection();
         if (selection) {
           selection.removeAllRanges();

@@ -34,10 +34,6 @@ export function OpenCakes() {
     );
   }
 
-  if (error) {
-    return <div className="text-danger">{error}</div>;
-  }
-
   const filterCakes = filterCakesByCategory('open_cakes', cakes);
 
   const openCakesRow1 = cakeDistribution(filterCakes, 0, 3);

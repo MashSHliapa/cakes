@@ -1,6 +1,6 @@
 import { MyContacts } from '../MyContacts/MyContacts';
 import { Home } from '../Home/Home';
-import logo from '../images/footer_logo.svg';
+import logo from '../icons/footer_logo.svg';
 import './Footer.scss';
 
 export function Footer() {

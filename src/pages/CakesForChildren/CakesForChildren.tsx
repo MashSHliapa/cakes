@@ -33,10 +33,6 @@ export function CakesForChildren() {
     );
   }
 
-  if (error) {
-    return <div className="text-danger">{error}</div>;
-  }
-
   const filterCakes = filterCakesByCategory('for_children', cakes);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);

@@ -61,18 +61,12 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
         formData.append('file', selectedFile);
       }
 
-      // formData.forEach((value, key) => {
-      //   console.log(key, value);
-      // });
-
       const response = await fetch('http://localhost:3011/send-email', {
         method: 'POST',
         body: formData,
       });
 
       if (response.ok) {
-        const result = await response.json();
-        console.log(result);
         reset();
         setSuccess(true);
       } else {
@@ -85,7 +79,7 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
     }
   };
 
-  const handleInputPhoneFrom5 = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputPhoneFrom5Symbol = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
     const cursorPosition = event.target.selectionStart;
 
@@ -99,8 +93,8 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
     }
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    handleInputPhoneFrom5(event);
+  const handleChangePhone = (event: React.ChangeEvent<HTMLInputElement>) => {
+    handleInputPhoneFrom5Symbol(event);
     register('phone').onChange(event);
   };
 
@@ -171,7 +165,7 @@ export function Form({ onClickBtnCloseOrderForm }: { onClickBtnCloseOrderForm: (
                           required
                           value={phone}
                           {...register('phone')}
-                          onChange={handleChange}
+                          onChange={handleChangePhone}
                         />
                         {errors.phone && <div className="form__error">{errors.phone.message}</div>}
                       </div>

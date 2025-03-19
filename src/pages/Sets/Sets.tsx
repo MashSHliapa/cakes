@@ -34,10 +34,6 @@ export function Sets() {
     );
   }
 
-  if (error) {
-    return <div className="text-danger">{error}</div>;
-  }
-
   const filterCakes = filterCakesByCategory('set', cakes);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);

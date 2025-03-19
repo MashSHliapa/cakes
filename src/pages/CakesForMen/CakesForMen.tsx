@@ -34,10 +34,6 @@ export function CakesForMen() {
     );
   }
 
-  if (error) {
-    return <div className="text-danger">{error}</div>;
-  }
-
   const filterCakes = filterCakesByCategory('for_men', cakes);
 
   const cakesRow1 = cakeDistribution(filterCakes, 0, 3);

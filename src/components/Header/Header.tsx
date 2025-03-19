@@ -1,6 +1,6 @@
 import { MenuBurger } from '../BurgerMenu/BurgerMenu';
 import { Navbar } from '../Navbar/Navbar';
-import logo from '../images/header_logo.svg';
+import logo from '../icons/header_logo.svg';
 import './Header.scss';
 
 export function Header() {
